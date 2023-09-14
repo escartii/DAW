@@ -1,8 +1,8 @@
 public class Ejercicio21 {
     public static void main (String[] args) {
     // variables enteras 
-        String creador = "Alvaro Escarti";
-        System.out.println("Hecho por: "+creador);
+        String nombre = "Alvaro Escarti";
+        System.out.println("Hecho por: "+nombre);
         int p = 200;
         int q = 201;
         // \n sirve para hacer un salto de linea en la terminal para que se lea mejor
@@ -28,6 +28,6 @@ public class Ejercicio21 {
         boolean primero = true;
         boolean ultimo = false;
         System.out.println("La variable primero vale: "+primero+"\nLa variable ultimo vale: "+ultimo);
-        String nombre = "Alvaro Escarti";
+
      }
 }

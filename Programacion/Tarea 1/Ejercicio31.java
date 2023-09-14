@@ -1,14 +1,16 @@
 public class Ejercicio31 {
     public static void main (String[] args)  {
+        String creator = "Alvaro Escarti";
+        System.out.println(creator);
         int a = 8;
         int b = 3;
         int c = -5;
         int resultado = a+b+c;
         System.out.println("El resultado del ejercicio A es: "+resultado);
-        ejercicioB();
+        ejercicioB(); // Restauro las variables a su valor original
     }
     public static void ejercicioB() {
-        int a = 8;
+        int a = 8; //Vuelvo a iniciar las variables a su valor para seguir operando
         int b = 3;
         int c = -5;
         int resultado = 2*b+3*(a-c);
