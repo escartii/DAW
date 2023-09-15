@@ -1,6 +1,6 @@
 public class Ejercicio22 {
     public static void main (String[] args) {
-       
+       // GitHub: https://github.com/escartii/DAW
        // Declaracion de variables
         int edad = 22;
         int codigoPostal = 46240;

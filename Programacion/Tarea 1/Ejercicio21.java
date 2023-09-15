@@ -1,5 +1,6 @@
 public class Ejercicio21 {
     public static void main (String[] args) {
+    // GitHub: https://github.com/escartii/DAW
     // variables enteras 
         String nombre = "Alvaro Escarti";
         System.out.println("Hecho por: "+nombre);

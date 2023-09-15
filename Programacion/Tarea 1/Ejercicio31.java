@@ -1,5 +1,6 @@
 public class Ejercicio31 {
     public static void main (String[] args)  {
+        // GitHub: https://github.com/escartii/DAW
         String creator = "Alvaro Escarti";
         System.out.println(creator);
         int a = 8;

@@ -1,8 +1,6 @@
 public class Ejercicio41 {
-    /**
-     * @param args
-     */
     public static void main (String[] args){
+        // GitHub: https://github.com/escartii/DAW
         String creator = "Alvaro Escarti";
         System.out.println(creator);
         int i = 8;

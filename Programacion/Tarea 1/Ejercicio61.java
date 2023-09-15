@@ -1,5 +1,6 @@
 public class Ejercicio61 {
     public static void main (String[] args){
+        // GitHub: https://github.com/escartii/DAW
         byte b = 1;
         short s = 1000;
         long ln = 1231829312983l;
