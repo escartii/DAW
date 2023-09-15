@@ -8,6 +8,13 @@ public class Ejercicio32 {
         double resultado = x+y+z;
         System.out.println("El resultado del ejercicio A es: "+resultado);
         ejercicioB(); // Restauro las variables a su valor original
+        ejercicioC();
+        ejercicioD();
+        ejercicioE();
+        ejercicioF();
+        ejercicioG();
+        ejercicioH();
+        ejercicioI();
     }
     public static void ejercicioB() {
         double x = 88; //Vuelvo a iniciar las variables a su valor para seguir operando
@@ -15,7 +22,6 @@ public class Ejercicio32 {
         double z = -5.2;
         double resultado = 2*y+3*(x-z);
         System.out.println("El resultado del ejercicio B es: "+resultado);
-        ejercicioC();
     }
     public static void ejercicioC() {
         double x = 88;
@@ -23,7 +29,6 @@ public class Ejercicio32 {
         double z = -5.2;
         double resultado = x/y;
         System.out.println("El resultado del ejercicio C es: "+resultado);
-        ejercicioD();
     }
     public static void ejercicioD() {
         double x = 88;
@@ -31,7 +36,6 @@ public class Ejercicio32 {
         double z = -5.2;
         double resultado = x%y;
         System.out.println("El resultado del ejercicio D es: "+resultado);
-        ejercicioE();
     }
     public static void ejercicioE() {
         double x = 88;
@@ -39,7 +43,6 @@ public class Ejercicio32 {
         double z = -5.2;
         double resultado = x/ (y+z);
         System.out.println("El resultado del ejercicio E es: "+resultado);
-        ejercicioF();
 
     }
     public static void ejercicioF() {
@@ -48,7 +51,6 @@ public class Ejercicio32 {
         double z = -5.2;
         double resultado = x*(y%z);
         System.out.println("El resultado del ejercicio F es: "+resultado);
-        ejercicioG();
     }
     public static void ejercicioG() {
         double x = 88;
@@ -56,7 +58,6 @@ public class Ejercicio32 {
         double z = -5.2;
         double resultado = 3*x-z-2*x;
         System.out.println("El resultado del ejercicio G es: "+resultado);
-        ejercicioH();
     }
     public static void ejercicioH() {
         double x = 88;
@@ -64,7 +65,6 @@ public class Ejercicio32 {
         double z = -5.2;
         double resultado = 2+x/5%y;
         System.out.println("El resultado del ejercicio H es: "+resultado);
-        ejercicioI();
     }
     public static void ejercicioI() {
         double x = 88;
