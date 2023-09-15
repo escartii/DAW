@@ -34,7 +34,7 @@ public class Ejercicio41 {
 
         boolean resultado = ( +c > +d);
         //System.out.println(resultado); -> Nos devuelve False
-        System.out.println("Ejercicio B:"+resultado);
+        System.out.println("Ejercicio B: "+resultado);
         //System.out.println(+c); 'c' en ascii tiene valor 99, 'd' tiene valor 100 en ASCII por eso da False
         //System.out.println(+d);
     }
