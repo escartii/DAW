@@ -63,7 +63,7 @@ public class Ejercicio32 {
         double x = 88;
         double y = 3.5;
         double z = -5.2;
-        double resultado = 2+x/5%y;
+        double resultado = 2*x/5%y;
         System.out.println("El resultado del ejercicio H es: "+resultado);
     }
     public static void ejercicioI() {
