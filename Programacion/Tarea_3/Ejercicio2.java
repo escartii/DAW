@@ -10,10 +10,10 @@ public class Ejercicio2 {
         double kilos = myObj.nextDouble();  
         System.out.println("¿Cuánto mides (en metros) : ");
         double altura = myObj.nextDouble(); 
-
         int b = 2; // defino el exponente
         double prueba = (Math.pow(altura, b));
-        System.out.println(kilos/prueba);
+        double resultado = (kilos / prueba);
+        System.out.printf("%.2f %n", resultado);
         
 
     }
