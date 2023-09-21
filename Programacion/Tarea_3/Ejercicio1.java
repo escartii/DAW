@@ -1,4 +1,3 @@
-package Tarea_3;
 
 import java.util.Scanner;
 
