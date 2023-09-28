@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Ejercicio4 {
     public static void main(String[] args){
     Scanner myObj = new Scanner(System.in);  // Creamos el objeto 
-
+    int patasInsectos; 
     System.out.println("Dime un número de insectos: ");
-    int patasInsectos = myObj.nextInt();
+    patasInsectos = myObj.nextInt();
     System.out.println("Dime un número de arácnidos: ");
     int patasAracnidos = myObj.nextInt();
     System.out.println("Dime un número de crustáceos: ");

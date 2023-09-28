@@ -6,7 +6,7 @@ public class Ejercicio1 {
 
     Scanner myObj = new Scanner(System.in);  // Creamos el objeto 
     System.out.println("Introduce un número: ");
-
+    
     int parametro = myObj.nextInt();  // Leemos la información que ha escrito el usuario
     System.out.println("Has introducido: " + parametro);  // Imprimo por pantalla lo que ha escrito el usuario
 
