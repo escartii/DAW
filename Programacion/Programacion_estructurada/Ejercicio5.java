@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Ejercicio5 {
     public static void main(String[] args) {
 
         int num;
@@ -17,7 +17,8 @@ public class Main {
                     int resultado = i + j +i * j;
                     System.out.println("i = " + i + " j = " + j + " resultado = " + resultado);
                 }
-            }
+            }  
         }
+        input.close();
     }
 }
