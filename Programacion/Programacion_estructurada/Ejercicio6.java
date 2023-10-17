@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Ejercicio6 {
+public class Ejercicio6  {
     public static void main(String[] args) {
 
         // Declaro las variables

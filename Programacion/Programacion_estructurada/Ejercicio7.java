@@ -40,6 +40,7 @@ public class Ejercicio7 {
             System.out.println("Has elegido Tijera" + "\nEl PC ha elegido: Papel");
             System.out.println("Gana el usuario");
         }
+        sc.close();
     }
 }
 
