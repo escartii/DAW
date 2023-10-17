@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Ejercicio6 {
@@ -25,13 +26,12 @@ public class Ejercicio6 {
 
         System.out.print("Introduce una hora: ");
         hora2 = sc.nextInt();
-        
+
         // Calculo las horas
         // resto el segundo dia al primer dia y lo multiplico por 24 para saber las horas que hay entre los dos dias
         // Luego le resto la hora del segundo dia a la hora del primer dia para saber las horas que hay entre las dos horas
         contadorHoras = (dia2 - dia) * 24 + (hora2 - hora);
-        System.out.println(contadorHoras + " horas");
+        System.out.println("Han pasado: " +contadorHoras + " horas");
         sc.close();
     }
 }
-
