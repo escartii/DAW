@@ -27,7 +27,7 @@ public class Ejercicio6 {
         hora2 = sc.nextInt();
         
         // Calculo las horas
-        // Explicación resto el segundo dia al primer dia y lo multiplico por 24 para saber las horas que hay entre los dos dias
+        // resto el segundo dia al primer dia y lo multiplico por 24 para saber las horas que hay entre los dos dias
         // Luego le resto la hora del segundo dia a la hora del primer dia para saber las horas que hay entre las dos horas
         contadorHoras = (dia2 - dia) * 24 + (hora2 - hora);
         System.out.println(contadorHoras + " horas");
