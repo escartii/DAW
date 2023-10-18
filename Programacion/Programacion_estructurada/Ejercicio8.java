@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner   
 
 public class Ejercicio8 {
     public static void main(String[] args) {
@@ -87,4 +87,4 @@ public class Ejercicio8 {
             System.out.println("Gana el PC");
         }
     }
-}
+}  
