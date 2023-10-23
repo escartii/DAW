@@ -7,7 +7,10 @@ public class Ejercicio01 {
         int numeroAleatorio;
         int numeroAleatorio2;
         int numeroAleatorio3;
+        String resultadoCadena = "";
     
+        System.out.println("Lanzamiento de dados");
+
         numeroAleatorio = (int) (Math.random()*3+1);
         numeroAleatorio2 = (int) (Math.random()*3+1);
         numeroAleatorio3 = (int) (Math.random()*3+1);
@@ -16,9 +19,10 @@ public class Ejercicio01 {
         String str2 = String.valueOf(numeroAleatorio2) + "\n";
         String str3 = String.valueOf(numeroAleatorio3) + "\n";
 
-        String resultadoCadena = str + str2 + str3;
-
+        resultadoCadena = str + str2 + str3;
         System.out.print(resultadoCadena);
+        
+        System.out.print("La suma de los dados es: ");
         System.out.print(numeroAleatorio
         +numeroAleatorio2
         +numeroAleatorio3
