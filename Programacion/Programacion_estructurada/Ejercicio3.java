@@ -4,19 +4,22 @@ import java.util.Scanner;
 
 public class Ejercicio3 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter an integer between -6 and 6: ");
-        int num = input.nextInt();
-        int digits = 0;
+
+        int dígitos = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduce un número entero entre -6 y 6: ");
+        int num = sc.nextInt();
+  
         if (num == 0) {
-            digits = 1;
+            dígitos = 1;
         } else {
             while (num != 0) {
-                digits++;
+                dígitos++;
                 num /= 10;
             }
          }
-        System.out.println("The number of digits in the integer is: " + digits);
+        System.out.println("El número de dígitos en el entero es: " + dígitos);
     }
 }
+
 
