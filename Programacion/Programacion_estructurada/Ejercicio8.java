@@ -1,4 +1,6 @@
-import java.util.Scanner   
+package Programacion_estructurada;
+
+import java.util.Scanner;
 
 public class Ejercicio8 {
     public static void main(String[] args) {
