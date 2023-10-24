@@ -17,6 +17,7 @@ public class Ejercicio02 {
             numeroAleatorio2 = (int) (Math.random()*6+1);
             ocurrenciasDados++; // contabiliza las veces que ha entrado en el bucle
         }
+        
         System.out.print("Los numeros: " + numeroAleatorio + " y " + numeroAleatorio2 + " son iguales\n");
         System.out.print("Los dados se han lazado: " + ocurrenciasDados + " veces");
     }
