@@ -4,11 +4,9 @@ public class Ejercicio5 {
     public static void main(String[] args) {
 
         int num;
-        
         Scanner input = new Scanner(System.in);
         System.out.print("Introduce un numero: ");
         num = input.nextInt();
-
         if (num < 0){
             System.out.println("El numero es negativo");
         }else if (num > 0){
