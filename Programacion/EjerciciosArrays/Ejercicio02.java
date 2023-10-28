@@ -15,13 +15,8 @@ public class Ejercicio02 {
                 { '4', '5', '6' },
                 { '7', '8', '9' }
         };
-<<<<<<< HEAD
-        boolean condition = true;
-        while (condition) {
-=======
-        // Mientras que sea verdadero, entra en el bucle (siempre).
+        
         while (true) {
->>>>>>> d574dbbd965d2d0535237537b5ed5f02b286abf9
             do {
                 System.out.print("\033[H\033[2J");
                 mostrarTablero(tablero);
@@ -98,10 +93,7 @@ public class Ejercicio02 {
             } while (tablero[fila][columna] == 'X' || tablero[fila][columna] == 'O');
             tablero[fila][columna] = 'O';
 
-<<<<<<< HEAD
-=======
             // flag2
->>>>>>> d574dbbd965d2d0535237537b5ed5f02b286abf9
             // Cogemos una posición de la matriz
             // System.out.println(tablero[1][1]);
 
@@ -135,19 +127,11 @@ public class Ejercicio02 {
                 System.out.println("Has ganado!");
                 break;
             }
-<<<<<<< HEAD
-            if (tablero[1][0] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X') {
-                System.out.println("Has ganado!");
-                break;
-            }
-            if (tablero[2][0] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X') {
-=======
             if (tablero[0][1] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X') {
                 System.out.println("Has ganado!");
                 break;
             }
             if (tablero[0][2] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X') {
->>>>>>> d574dbbd965d2d0535237537b5ed5f02b286abf9
                 System.out.println("Has ganado!");
                 break;
             }
@@ -175,28 +159,16 @@ public class Ejercicio02 {
                 System.out.println("Ha ganado PC");
                 break;
             }
-<<<<<<< HEAD
-            // Comprobar vertical usuario
-=======
             // Comprobar vertical PC
->>>>>>> d574dbbd965d2d0535237537b5ed5f02b286abf9
             if (tablero[0][0] == 'O' && tablero[1][0] == 'O' && tablero[2][0] == '0') { // x x x
                 System.out.println("Ha ganado PC");
                 break;
             }
-<<<<<<< HEAD
-            if (tablero[1][0] == 'O' && tablero[1][1] == 'O' && tablero[2][1] == '0') {
-                System.out.println("Ha ganado PC");
-                break;
-            }
-            if (tablero[2][0] == 'O' && tablero[1][2] == '0' && tablero[2][2] == '0') {
-=======
             if (tablero[0][1] == 'O' && tablero[1][1] == 'O' && tablero[2][1] == '0') {
                 System.out.println("Ha ganado PC");
                 break;
             }
             if (tablero[0][2] == 'O' && tablero[1][2] == '0' && tablero[2][2] == '0') {
->>>>>>> d574dbbd965d2d0535237537b5ed5f02b286abf9
                 System.out.println("Ha ganado PC");
                 break;
             }
