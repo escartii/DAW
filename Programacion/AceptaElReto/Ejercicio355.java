@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main {
+public class Ejercicio355 {
     public static void main(String[] args) {
         int num;
         int contador;
