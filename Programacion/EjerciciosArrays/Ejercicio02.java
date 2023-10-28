@@ -17,10 +17,7 @@ public class Ejercicio02 {
         };
         boolean condition = true;
         while (condition) {
-            do {
-                // Limpiar la pantalla
-                // 1
-                
+            do { 
                 System.out.print("\033[H\033[2J");
                 mostrarTablero(tablero);
                 System.out.print("Dime en qué posición colocas la ficha (1-9): ");
@@ -173,6 +170,7 @@ public class Ejercicio02 {
             }
         }
     }
+    
     // Clase para mostrar la matriz en forma de tablero
     public static void mostrarTablero(char[][] tablero) {
         for (int i = 0; i < 3; i++) {
