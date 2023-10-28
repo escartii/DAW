@@ -9,7 +9,7 @@ public class Ejercicio1 {
             System.out.print("Introduce un número: " + (i + 1) + ": ");
             numeros[i] = sc.nextInt();
         }
-
+        
         // Roto el array una posición a la derecha
         int ultimoNumero = numeros[14];
         for (int i = 13; i >= 0; i--) {

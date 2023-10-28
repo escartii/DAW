@@ -12,6 +12,7 @@ public class EjercicioPDF {
                 // Mostramos Las filas i y las columnas j
                 System.out.print(matriz[i][j] + " ");
             }
+            // Salto de línea
             System.out.println();
         }
     }
