@@ -17,7 +17,7 @@ public class Ejercicio02 {
         };
         boolean condition = true;
         while (condition) {
-            do { 
+            do {
                 System.out.print("\033[H\033[2J");
                 mostrarTablero(tablero);
                 System.out.print("Dime en qué posición colocas la ficha (1-9): ");
@@ -89,7 +89,6 @@ public class Ejercicio02 {
             } while (tablero[fila][columna] == 'X' || tablero[fila][columna] == 'O');
             tablero[fila][columna] = 'O';
 
-
             // Cogemos una posición de la matriz
             // System.out.println(tablero[1][1]);
 
@@ -119,15 +118,15 @@ public class Ejercicio02 {
             }
 
             // Comprobar vertical usuario
-             if (tablero[0][0] == 'X' && tablero[1][0] == 'X' && tablero[2][0] == 'X') { // x x x
+            if (tablero[0][0] == 'X' && tablero[1][0] == 'X' && tablero[2][0] == 'X') { // x x x
                 System.out.println("Has ganado!");
                 break;
             }
-             if (tablero[1][0] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X') {
+            if (tablero[1][0] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X') {
                 System.out.println("Has ganado!");
                 break;
             }
-             if (tablero[2][0] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X') {
+            if (tablero[2][0] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X') {
                 System.out.println("Has ganado!");
                 break;
             }
@@ -156,21 +155,21 @@ public class Ejercicio02 {
                 break;
             }
             // Comprobar vertical usuario
-             if (tablero[0][0] == 'O' && tablero[1][0] == 'O' && tablero[2][0] == '0') { // x x x
+            if (tablero[0][0] == 'O' && tablero[1][0] == 'O' && tablero[2][0] == '0') { // x x x
                 System.out.println("Ha ganado PC");
                 break;
             }
-             if (tablero[1][0] == 'O' && tablero[1][1] == 'O' && tablero[2][1] == '0') {
+            if (tablero[1][0] == 'O' && tablero[1][1] == 'O' && tablero[2][1] == '0') {
                 System.out.println("Ha ganado PC");
                 break;
             }
-             if (tablero[2][0] == 'O' && tablero[1][2] == '0' && tablero[2][2] == '0') {
+            if (tablero[2][0] == 'O' && tablero[1][2] == '0' && tablero[2][2] == '0') {
                 System.out.println("Ha ganado PC");
                 break;
             }
         }
     }
-    
+
     // Clase para mostrar la matriz en forma de tablero
     public static void mostrarTablero(char[][] tablero) {
         for (int i = 0; i < 3; i++) {

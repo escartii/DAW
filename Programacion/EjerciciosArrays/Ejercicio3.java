@@ -3,13 +3,14 @@ import java.util.Scanner;
 public class Ejercicio3 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+        int i = 0;
+        int c = 0;
         int[][] m1 = new int[4][4];
         boolean esSimetrica = true;
-
+        Scanner sc = new Scanner(System.in);
         // Rellenar la matriz por teclado
-        {
-            int i = 0;
+
             while (i < 4) {
                 int j = 0;
                 while (j < 4) {
@@ -19,10 +20,8 @@ public class Ejercicio3 {
                 }
                 i++;
             }
-        }
 
         // Comprobar si la matriz es simétrica
-            int i = 0;
             while (i < 4) {
                 for (int j = 0; j < 4; j++) {
                     if (m1[i][j] != m1[j][i]) {
@@ -42,7 +41,6 @@ public class Ejercicio3 {
 
         // muestrame la matriz por pantalla
         System.out.println("La matriz es: ");
-        int c = 0;
         while (c < 4) {
             System.out.println();
             int j = 0;
