@@ -27,61 +27,63 @@ public class Ejercicio02 {
 
             } while (fichaJugador <= 0 || fichaJugador > 9);
 
-            if (fichaJugador == 1) {
-                tablero[0][0] = 'X';
-                System.out.println(" ");
-                mostrarTablero(tablero);
-            }
-            if (fichaJugador == 2) {
-                tablero[0][1] = 'X';
-                System.out.println(" ");
-                mostrarTablero(tablero);
-            }
-            if (fichaJugador == 3) {
-                tablero[0][2] = 'X';
-                System.out.println(" ");
-                mostrarTablero(tablero);
-            }
-            if (fichaJugador == 4) {
-                tablero[1][0] = 'X';
-                System.out.println(" ");
-                mostrarTablero(tablero);
-            }
-            if (fichaJugador == 5) {
-                tablero[1][1] = 'X';
-                System.out.println(" ");
-                mostrarTablero(tablero);
-            }
-            if (fichaJugador == 6) {
-                tablero[1][2] = 'X';
-                System.out.println(" ");
-                mostrarTablero(tablero);
-            }
-            if (fichaJugador == 7) {
-                tablero[2][0] = 'X';
-                System.out.println(" ");
-                mostrarTablero(tablero);
-            }
-            if (fichaJugador == 8) {
-                tablero[2][1] = 'X';
-                System.out.println(" ");
-                mostrarTablero(tablero);
-            }
-            if (fichaJugador == 9) {
-                tablero[2][2] = 'X';
-                System.out.println(" ");
-                mostrarTablero(tablero);
+            switch (fichaJugador) {
+                case 1 -> {
+                    tablero[0][0] = 'X';
+                    System.out.println(" ");
+                    mostrarTablero(tablero);
+                }
+                case 2 -> {
+                    tablero[0][1] = 'X';
+                    System.out.println(" ");
+                    mostrarTablero(tablero);
+                }
+                case 3 -> {
+                    tablero[0][2] = 'X';
+                    System.out.println(" ");
+                    mostrarTablero(tablero);
+                }
+                case 4 -> {
+                    tablero[1][0] = 'X';
+                    System.out.println(" ");
+                    mostrarTablero(tablero);
+                }
+                case 5 -> {
+                    tablero[1][1] = 'X';
+                    System.out.println(" ");
+                    mostrarTablero(tablero);
+                }
+                case 6 -> {
+                    tablero[1][2] = 'X';
+                    System.out.println(" ");
+                    mostrarTablero(tablero);
+                }
+                case 7 -> {
+                    tablero[2][0] = 'X';
+                    System.out.println(" ");
+                    mostrarTablero(tablero);
+                }
+                case 8 -> {
+                    tablero[2][1] = 'X';
+                    System.out.println(" ");
+                    mostrarTablero(tablero);
+                }
+                case 9 -> {
+                    tablero[2][2] = 'X';
+                    System.out.println(" ");
+                    mostrarTablero(tablero);
+                }
             }
 
             // Turno del ordenador (O)
-            System.out.println("Turno del ordenador (O):");
+
             do {
                 System.out.println("Turno del ordenador (O):");
                 fila = (int) (Math.random() * 3);
                 columna = (int) (Math.random() * 3);
             } while (tablero[fila][columna] == 'X' && tablero[fila][columna] == 'O');
             tablero[fila][columna] = 'O';
-            mostrarTablero(tablero);
+
 
             // Cogemos una posición de la matriz
             // System.out.println(tablero[1][1]);
