@@ -3,7 +3,7 @@ package Programacion_estructurada.Extra;
 import java.util.Scanner;
 
 public class CalculadoraRPN {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         double[] registros = new double[4];
         int indice = 0;
