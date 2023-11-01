@@ -1,5 +1,4 @@
 package Programacion_estructurada.Extra;
-
 import java.util.Scanner;
 
 public class CalculadoraRPN {
