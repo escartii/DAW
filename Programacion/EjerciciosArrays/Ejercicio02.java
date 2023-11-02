@@ -199,10 +199,10 @@ public class Ejercicio02 {
                     posibilidades = false;
                     hayGanador = true;
                 }
-                if (numInt >= 9) {
+                if (numInt > 9) {
                     posibilidades = false;
                 }
-                if (hayGanador) {
+                if (!hayGanador) {
                     System.out.println("No hay ganador");
 
                 }
