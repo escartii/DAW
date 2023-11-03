@@ -68,7 +68,7 @@ public class PreparacionExamen {
             boolean iguales = true;
 
             for (int f = 0; f < matriz1.length; f++) {
-                for (int c = 0; c < matriz1[f].length; c++) {
+                for (int c = 0; c < matriz2.length; c++) {
                     if (matriz1[f][c] != matriz2[f][c]) {
                         iguales = false;
                     }
