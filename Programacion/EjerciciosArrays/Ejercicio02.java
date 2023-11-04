@@ -202,7 +202,7 @@ public class Ejercicio02 {
                 if (numInt > 9) {
                     posibilidades = false;
                 }
-                if (hayGanador) {
+                if (!hayGanador) {
                     System.out.println("No hay ganador");
 
                 }
