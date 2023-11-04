@@ -61,26 +61,30 @@ public class PreparacionExamen {
         System.out.println(" ");
 
         // Matrices (arreglos 2D)
-       
-         // Comprobar si dos matrices son iguales
-            int[][] matriz1 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-            int[][] matriz2 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-            boolean iguales = true;
 
-            for (int f = 0; f < matriz1.length; f++) {
-                for (int c = 0; c < matriz2.length; c++) {
-                    if (matriz1[f][c] != matriz2[f][c]) {
-                        iguales = false;
-                    }
+        // Comprobar si dos matrices son iguales
+        int[][] matriz1 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        int[][] matriz2 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        boolean iguales = true;
+
+        for (int f = 0; f < matriz1.length; f++) {
+            for (int c = 0; c < matriz2.length; c++) {
+                if (matriz1[f][c] != matriz2[f][c]) {
+                    iguales = false;
                 }
             }
-            System.out.println(matriz1[1][1]);
-            System.out.println(matriz1[1][1] * 5);
+        }
+        System.out.println(matriz1[1][1]);
+        System.out.println(matriz1[1][1] * 5);
 
-            if (iguales) {
-                System.out.println("Las matrices son iguales");
-            } else {
-                System.out.println("Las matrices no son iguales");
+        if (iguales) {
+            System.out.println("Las matrices son iguales");
+        } else {
+            System.out.println("Las matrices no son iguales");
+
+            for (int alvaro = 5; alvaro >= 0; alvaro--) {
+                System.out.println(alvaro);
             }
         }
     }
+}
