@@ -1,4 +1,3 @@
-package PreparacionExamen;
 
 public class PreparacionExamen {
     public static void main(String[] args) {
@@ -84,6 +83,20 @@ public class PreparacionExamen {
 
             for (int alvaro = 5; alvaro >= 0; alvaro--) {
                 System.out.println(alvaro);
+            }
+
+
+            int alvaro = 5; 
+            // Bucle for que hace una cuenta atrás hasta que sea menor o igual que 0
+            for (alvaro = 5; alvaro >= 0; alvaro--) {
+                System.out.println("variable alvaro (FOR) : " + alvaro);
+            }
+            
+            // Bucle while que se ejecuta 5 veces hasta que el resultado sea 0
+            int escarti = 5;
+            while (escarti != 0) {
+                escarti--;
+                System.out.println("Variable escarti (WHILE) : " + escarti);
             }
         }
     }
