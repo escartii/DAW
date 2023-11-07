@@ -8,6 +8,7 @@ public class pruebas2 {
         boolean salir = true;
         String usuario = "";
         Scanner sc = new Scanner(System.in);
+        final int numeroConstante = 9;
 
         do {
             System.out.println("Introduce un nombre de usuario");
@@ -18,13 +19,14 @@ public class pruebas2 {
                 salir = false;
             }
         } while (salir);
-        
+
         // Mostrar los elementos de la matriz
         for (int i = 0; i < vector.length; i++) {
             for (int j = 0; j < 9; j++) {
                 System.out.print(vector[i][j] + " ");
             }
             System.out.println();
+            System.out.println(numeroConstante);
         }
     }
 }
