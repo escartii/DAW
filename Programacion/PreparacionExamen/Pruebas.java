@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Pruebas {
     public static void main(String[] args) {
-
+        boolean shouldBreak = false;
         String colorVerde = "\u001B[32m";
         String resetColorCode = "\u001B[0m";
         String nombre = "Alvaro";
@@ -21,3 +21,7 @@ public class Pruebas {
         System.out.println("Hecho por: " + colorVerde + nombre  + apellido + resetColorCode);
     }
 }
+        
+ 
+    
+
