@@ -1,5 +1,7 @@
 package PreparacionExamen;
 
+import java.util.Arrays;
+
 public class Ejercicioarreglos {
     public static void main(String[] args) {
         // Generar un arreglo con numero aleatorios

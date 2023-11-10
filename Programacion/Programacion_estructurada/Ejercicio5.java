@@ -1,3 +1,4 @@
+package Programacion_estructurada;
 import java.util.Scanner;
 
 public class Ejercicio5 {
