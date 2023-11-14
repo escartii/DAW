@@ -1,5 +1,3 @@
-package Examen.ExamenDAM;
-
 import java.util.Scanner;
 import java.util.Arrays;
 
