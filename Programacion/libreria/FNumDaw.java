@@ -63,18 +63,6 @@ public class FNumDaw {
         return resultado;
     }
 
-    public static boolean esKaprekar(int numero) {
-        int cuadrado = numero * numero;
-        String cuadradoString = String.valueOf(cuadrado);
-        int longitud = cuadradoString.length();
-        int mitad = longitud / 2;
-        if (longitud % 2 != 0) {
-            mitad++;
-        }
-        int izquierda = Integer.parseInt(cuadradoString.substring(0, mitad));
-        int derecha = Integer.parseInt(cuadradoString.substring(mitad));
-        return izquierda + derecha == numero;
-    }
     public static void main(String[] args) {
         int base;
         int exponente;
