@@ -3,6 +3,7 @@ package libreria;
 import libreria.FNumDaw;
 import java.util.Scanner;
 
+
 public class FNumDaw {
         
     public static double potencia(int base, int exponente) {
@@ -56,6 +57,24 @@ public class FNumDaw {
         }
         return primoAnterior;
     }
+
+    public static boolean esKaprekar(int numero) {
+        int cuadrado = numero * numero;
+        String cuadradoString = String.valueOf(cuadrado);
+        int longitud = cuadradoString.length();
+        int mitad = longitud / 2;
+        if (longitud % 2 != 0) {
+            mitad++;
+        }
+        int izquierda = Integer.parseInt(cuadradoString.substring(0, mitad));
+        int derecha = Integer.parseInt(cuadradoString.substring(mitad));
+        return izquierda + derecha == numero;
+    }
+
+    public static String pegarNumeros(int numero, int segundoNumero){
+        String resultado = (numero + "" + segundoNumero);
+        return resultado;
+    }
     public static void main(String[] args) {
         int base;
         int exponente;
@@ -69,6 +88,8 @@ public class FNumDaw {
         boolean esPrimo;
         int primoSiguiente;
         int primoAnterior;
+        int segundoNumero;
+        String concatenacion = "";
 
         System.out.println("Ejercicio de: **Alvaro Escarti**");
         Scanner sc = new Scanner(System.in);
@@ -116,5 +137,14 @@ public class FNumDaw {
         numero = sc.nextInt();
         primoAnterior = anteriorPrimo(numero);
         System.out.println("Has introducido: "+ numero + " y el primero siguiente es:  " + primoAnterior);
+
+        // Ejercicio 8
+        System.out.print("Introduce dos numeros: ");
+        numero = sc.nextInt();
+        System.out.print("Escribe el segundo numero: ");
+        segundoNumero = sc.nextInt();
+        concatenacion = pegarNumeros(numero, segundoNumero);
+        System.out.println(concatenacion);
+
     }
 }
