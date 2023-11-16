@@ -58,6 +58,11 @@ public class FNumDaw {
         return primoAnterior;
     }
 
+    public static String pegarNumeros(int numero, int segundoNumero){
+        String resultado = (numero + "" + segundoNumero);
+        return resultado;
+    }
+
     public static boolean esKaprekar(int numero) {
         int cuadrado = numero * numero;
         String cuadradoString = String.valueOf(cuadrado);
@@ -69,11 +74,6 @@ public class FNumDaw {
         int izquierda = Integer.parseInt(cuadradoString.substring(0, mitad));
         int derecha = Integer.parseInt(cuadradoString.substring(mitad));
         return izquierda + derecha == numero;
-    }
-
-    public static String pegarNumeros(int numero, int segundoNumero){
-        String resultado = (numero + "" + segundoNumero);
-        return resultado;
     }
     public static void main(String[] args) {
         int base;
