@@ -29,6 +29,17 @@ public class FNumDaw {
         return numero == numeroInvertido;
     }
 
+    public static boolean esPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
     public static void main(String[] args) {
         int base;
         int exponente;
@@ -39,6 +50,7 @@ public class FNumDaw {
         int numeroInvert;
         int numCapi;
         boolean esCapicua;
+        boolean esPrimo;
 
         System.out.println("Ejercicio de: **Alvaro Escarti**");
         Scanner sc = new Scanner(System.in);
@@ -66,9 +78,15 @@ public class FNumDaw {
         // Ejercicio 4
         System.out.print("Escribe un numero para comprobar si es capicua: ");
         numCapi = sc.nextInt();
-        esCapicua = esCapicua(numero);
+        esCapicua = esCapicua(numCapi);
         System.out.println(esCapicua);
 
-        
+        // Ejercicio 5
+        System.out.print("Escribe un numero para comprobar si es primo: ");
+        numero = sc.nextInt();
+        esPrimo = esPrimo(numero);
+        System.out.println(esPrimo);
+
+        // Ejercicio 6
     }
 }
