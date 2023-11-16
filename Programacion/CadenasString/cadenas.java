@@ -1,37 +1,69 @@
 package CadenasString;
 
+import java.util.Arrays;
+
 public class cadenas {
     public static void main(String[] args) {
-        // length() - Obtener la longitud de la cadena:
-        String str = "Hola, mundo!";
-        int longitud = str.length();
-        System.out.println("Longitud de la cadena: " + longitud);
-        // charAt(int index) - Obtener el carácter en una posición específica:
-        char caracter = str.charAt(7);
-        System.out.println("Carácter en la posición 7: " + caracter);
-        //substring(int beginIndex) - Obtener una subcadena desde el índice especificado:
-        String subcadena = str.substring(6);
-        System.out.println("Subcadena desde la posición 6: " + subcadena);
-        //substring(int beginIndex, int endIndex) - Obtener una subcadena desde el índice de inicio hasta el índice de fin (no incluido):
-        String subcadena2 = str.substring(0, 4);
-        System.out.println("Subcadena desde la posición 0 hasta la 3: " + subcadena2);
-        // toLowerCase() - Convertir la cadena a minúsculas:
-        String minusculas = str.toLowerCase();
-        System.out.println("En minúsculas: " + minusculas);
-        //toUpperCase() - Convertir la cadena a mayúsculas:
-        String mayusculas = str.toUpperCase();
-        System.out.println("En mayúsculas: " + mayusculas);
-        //indexOf(String str) - Encontrar la posición de una subcadena dentro de la cadena:
-        int indice = str.indexOf("mundo");
-        System.out.println("Índice de la subcadena 'mundo': " + indice);
-        //replace(char oldChar, char newChar) - Reemplazar un carácter en la cadena:
-        String nuevaCadena = str.replace('o', '0');
-        System.out.println("Reemplazar 'o' con '0': " + nuevaCadena);
-        // startsWith(String prefix) - Verificar si la cadena comienza con un prefijo dado:
-        boolean comienzaCon = str.startsWith("Hola");
-        System.out.println("¿La cadena comienza con 'Hola'? " + comienzaCon);
-        // endsWith(String suffix) - Verificar si la cadena termina con un sufijo dado:
-        boolean terminaCon = str.endsWith("!");
-        System.out.println("¿La cadena termina con '!'? " + terminaCon);
+        // Crear una cadena para los ejemplos
+        String cadena = "Hola, Mundo!";
+
+        // charAt(int index)
+        char caracterEnPosicion = cadena.charAt(7);
+        System.out.println("charAt(7): " + caracterEnPosicion);
+
+        // compareTo(String otraCadena)
+        String otraCadena = "Hola";
+        int comparacion = cadena.compareTo(otraCadena);
+        System.out.println("compareTo('Hola'): " + comparacion);
+
+        // concat(String str)
+        String concatenada = cadena.concat(" ¡Bienvenido!");
+        System.out.println("concat(' ¡Bienvenido!'): " + concatenada);
+
+        // endsWith(String sufijo)
+        boolean terminaCon = cadena.endsWith("Mundo!");
+        System.out.println("endsWith('Mundo!'): " + terminaCon);
+
+        // equalsIgnoreCase(String otraCadena)
+        boolean igualesIgnorandoMayusculas = cadena.equalsIgnoreCase("hola, mundo!");
+        System.out.println("equalsIgnoreCase('hola, mundo!'): " + igualesIgnorandoMayusculas);
+
+        // getBytes()
+        byte[] bytes = cadena.getBytes();
+        System.out.println("getBytes(): " + Arrays.toString(bytes));
+
+        // indexOf(int ch)
+        int indice = cadena.indexOf('M');
+        System.out.println("indexOf('M'): " + indice);
+
+        // lastIndexOf(int ch)
+        int ultimoIndice = cadena.lastIndexOf('o');
+        System.out.println("lastIndexOf('o'): " + ultimoIndice);
+
+        // length()
+        int longitud = cadena.length();
+        System.out.println("length(): " + longitud);
+
+        // replace(char viejo, char nuevo)
+        String reemplazada = cadena.replace('o', '0');
+        System.out.println("replace('o', '0'): " + reemplazada);
+
+        // substring(int inicio, int final)
+        String subcadena = cadena.substring(6, 11);
+        System.out.println("substring(6, 11): " + subcadena);
+
+        // toLowerCase()
+        String enMinusculas = cadena.toLowerCase();
+        System.out.println("toLowerCase(): " + enMinusculas);
+
+        // toUpperCase()
+        String enMayusculas = cadena.toUpperCase();
+        System.out.println("toUpperCase(): " + enMayusculas);
+
+        // trim()
+        String conEspacios = "   Hola   ";
+        String sinEspacios = conEspacios.trim();
+        System.out.println("trim(): '" + sinEspacios + "'");
     }
 }
+
