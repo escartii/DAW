@@ -5,34 +5,35 @@ import java.util.Scanner;
 
 public class FNumDaw {
         
-
-    public static double potencia() {
-
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Introduce la base: ");
-        double base = sc.nextDouble();
-        System.out.print("Introduce el exponente: ");
-        double exponente = sc.nextDouble();
+    public static double potencia(int base, int exponente) {
+    
         double resultado = Math.pow(base, exponente);
         return resultado;
     }
 
-    public static int calcularNumeros() {
+    public static int calcularNumeros(int number) {
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Escribe un numero: ");
-        int number = sc.nextInt();
         int largaria = String.valueOf(number).length();
         return largaria;
     }
+
     public static void main(String[] args) {
-        System.out.println("Hola");
-
-        double resultado = potencia();
+        System.out.println("Ejercicio de: **Alvaro Escarti**");
+        Scanner sc = new Scanner(System.in);
+        
+        // Ejercicio 1
+        System.out.print("Dime la base: ");
+        int base = sc.nextInt();
+        System.out.print("Dime el exponente: ");
+        int exponente = sc.nextInt();
+        double resultado = potencia(base, exponente);
         System.out.println(resultado);
-
-        int largaria = calcularNumeros();
+        
+        // Ejercicio 2
+        System.out.print("Escribe un numero: ");
+        int number = sc.nextInt();
+        int largaria = calcularNumeros(number);
         System.out.println(largaria);
+        
     }
-    
 }
