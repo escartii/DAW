@@ -1,5 +1,7 @@
 package CadenasString;
 
+import java.util.Random;
+
 public class metodomath {
     public static void main(String[] args) {
         // abs()
@@ -46,5 +48,23 @@ public class metodomath {
         System.out.println("sin(45°): " + seno);
         System.out.println("cos(45°): " + coseno);
         System.out.println("tan(45°): " + tangente);
+
+        // Me quedo con el ultimo numero
+
+       int ultimoNumero = 0;
+        for (int i = 0; i < 10; i++){
+            ultimoNumero = i;
+        }
+        System.out.println(String.valueOf(ultimoNumero).charAt(String.valueOf(ultimoNumero).length() - 1));
+        // me quedo con el numero más grande 
+        Random random = new Random();
+            int maximo2 = Integer.MIN_VALUE;
+            for (int i = 0; i < 10; i++) {
+                int numAleatorio = random.nextInt();
+                if (numAleatorio > maximo2) {
+                    maximo2 = numAleatorio;
+                }
+            }
+            System.out.println("El número más grande es: " + maximo2);
     }
 }
