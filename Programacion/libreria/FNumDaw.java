@@ -48,6 +48,14 @@ public class FNumDaw {
         }
         return siguiente;
     }
+
+    public static int anteriorPrimo(int numero) {
+        int primoAnterior = numero - 1;
+        while (!esPrimo(primoAnterior)) {
+            primoAnterior--;
+        }
+        return primoAnterior;
+    }
     public static void main(String[] args) {
         int base;
         int exponente;
@@ -60,6 +68,7 @@ public class FNumDaw {
         boolean esCapicua;
         boolean esPrimo;
         int primoSiguiente;
+        int primoAnterior;
 
         System.out.println("Ejercicio de: **Alvaro Escarti**");
         Scanner sc = new Scanner(System.in);
@@ -102,5 +111,10 @@ public class FNumDaw {
         primoSiguiente = siguientePrimo(numero);
         System.out.println("Has introducido: "+ numero + " y el primero siguiente es:  " + primoSiguiente);
 
+        // Ejercicio 7
+        System.out.print("Escribe un numero: ");
+        numero = sc.nextInt();
+        primoAnterior = anteriorPrimo(numero);
+        System.out.println("Has introducido: "+ numero + " y el primero siguiente es:  " + primoAnterior);
     }
 }
