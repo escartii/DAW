@@ -22,9 +22,22 @@ public class kaprekar {
             char numSeparado = digitos[i];
             int cuadradoNum = Character.getNumericValue(numSeparado);
             suma = suma + cuadradoNum;
+            if (cuadradoStr.length() == 4) {
+                String primeraParte = cuadradoStr.substring(0, 2);
+                String segundaParte = cuadradoStr.substring(3,4);
+                int primeraParteNum = Integer.parseInt(primeraParte);
+                int segundaParteNum = Integer.parseInt(segundaParte);
+                suma = primeraParteNum + segundaParteNum;
+            }
+            if (cuadradoStr.length() == 6) {
+                String primeraParte = cuadradoStr.substring(0, 3);
+                String segundaParte = cuadradoStr.substring(3,6);
+                int primeraParteNum = Integer.parseInt(primeraParte);
+                int segundaParteNum = Integer.parseInt(segundaParte);
+                suma = primeraParteNum + segundaParteNum;
+            }
         }
         System.out.println("La suma de los números es: " + suma);
-        System.out.println(args);
         if (suma == num) {
             System.out.println("El numero es Kaprekar");
         } else {

@@ -63,6 +63,23 @@ public class FNumDaw {
         return resultado;
     }
 
+    public static boolean kaprekar(int num){
+        boolean EsKaprekar;
+        int cuadrado = num * num;
+        String cuadradoStr = String.valueOf(cuadrado);
+        int numDigitos = cuadradoStr.length();
+        int mitad = numDigitos / 2;
+        int primeraParte = Integer.parseInt(cuadradoStr.substring(0, mitad));
+        int segundaParte = Integer.parseInt(cuadradoStr.substring(mitad));
+        if (num == primeraParte + segundaParte) {
+            EsKaprekar = true;
+        } else {
+            EsKaprekar = false;
+        }
+        
+        return EsKaprekar;
+    }
+
     public static void main(String[] args) {
         int base;
         int exponente;
@@ -133,6 +150,13 @@ public class FNumDaw {
         segundoNumero = sc.nextInt();
         concatenacion = pegarNumeros(numero, segundoNumero);
         System.out.println(concatenacion);
+
+        // Ejercicio kaprekar
+
+        System.out.print("Introduce un numero para saber si es kaprekar: ");
+        numero = sc.nextInt();
+        boolean eskaprekar = kaprekar(numero);
+        System.out.println(eskaprekar);
 
     }
 }
