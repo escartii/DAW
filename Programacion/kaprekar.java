@@ -24,7 +24,7 @@ public class kaprekar {
             suma = suma + cuadradoNum;
         }
         System.out.println("La suma de los números es: " + suma);
-
+        System.out.println(args);
         if (suma == num) {
             System.out.println("El numero es Kaprekar");
         } else {
