@@ -1,7 +1,8 @@
 package Funciones;
 
-import libreria.Vector;
 import java.util.Arrays;
+
+import ejercicios.libreria.Vector;
 
 public class pruebaLibreriaV {
     public static void main(String[] args) {

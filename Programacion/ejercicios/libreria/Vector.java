@@ -1,4 +1,4 @@
-package libreria;
+package ejercicios.libreria;
 
 import java.util.Scanner;
 

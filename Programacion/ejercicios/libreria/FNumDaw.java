@@ -1,12 +1,10 @@
 package libreria;
-
-import libreria.FNumDaw;
 import java.util.Scanner;
 
 
 public class FNumDaw {
-        
-    public static double potencia(int base, int exponente) {
+    
+    public static double potencia(double base, double exponente) {
     
         double resultado = Math.pow(base, exponente);
         return resultado;
@@ -58,12 +56,31 @@ public class FNumDaw {
         return primoAnterior;
     }
 
+    public static int digitoN(int numero, int posicion) {
+        String numeroString = String.valueOf(numero);
+        char digito = numeroString.charAt(posicion);
+        return Character.getNumericValue(digito);
+    }
+
+    public static int posicionDeDigito(int numero, int digito) {
+        String numeroString = String.valueOf(numero);
+        String digitoString = String.valueOf(digito);
+        int posicion = numeroString.indexOf(digitoString);
+        return posicion;
+    }
+
+    public static int parteNumero(int numero, int posicionInicial, int posicionFinal) {
+        String numeroString = String.valueOf(numero);
+        String trozo = numeroString.substring(posicionInicial, posicionFinal + 1);
+        return Integer.parseInt(trozo);
+    }
+
     public static String pegarNumeros(int numero, int segundoNumero){
         String resultado = (numero + "" + segundoNumero);
         return resultado;
     }
 
-    public static boolean kaprekar(int num){
+     public static boolean kaprekar(int num){
         boolean EsKaprekar;
         int cuadrado = num * num;
         String cuadradoStr = String.valueOf(cuadrado);
@@ -79,6 +96,12 @@ public class FNumDaw {
         
         return EsKaprekar;
     }
+
+    // LIbreria para vectores
+
+    
+
+
 
     public static void main(String[] args) {
         int base;
@@ -135,13 +158,13 @@ public class FNumDaw {
         System.out.print("Escribe un numero: ");
         numero = sc.nextInt();
         primoSiguiente = siguientePrimo(numero);
-        System.out.println("Has introducido: "+ numero + " y el primero siguiente es:  " + primoSiguiente);
+        System.out.println("Has introducido: "+ numero + " y el primo siguiente es:  " + primoSiguiente);
 
         // Ejercicio 7
         System.out.print("Escribe un numero: ");
         numero = sc.nextInt();
         primoAnterior = anteriorPrimo(numero);
-        System.out.println("Has introducido: "+ numero + " y el primero siguiente es:  " + primoAnterior);
+        System.out.println("Has introducido: "+ numero + " y el primo anterior es:  " + primoAnterior);
 
         // Ejercicio 8
         System.out.print("Introduce dos numeros: ");
