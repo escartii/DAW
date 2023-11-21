@@ -4,21 +4,40 @@ import libreria.FNumDaw;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
-        int base;
-        int exponente;
-        double resultado;
-
-                     
+       
+        boolean esPrimo;
+        boolean esCapicua;
+        int contador = 0;
+        int contadorCapi = 0;
+             
         System.out.println("Ejercicio de: **Alvaro Escarti**");
         Scanner sc = new Scanner(System.in);
-        
+
         // Ejercicio 1
-        System.out.print("Dime la base: ");
-        base = sc.nextInt();
-        System.out.print("Dime el exponente: ");
-        exponente = sc.nextInt();
-        resultado = FNumDaw.potencia(base, exponente);
-        System.out.println(resultado);   
+        for (int i = 1; i <= 1000; i++){
+            esPrimo = FNumDaw.esPrimo(i);
+            if (esPrimo) {
+                contador++;
+                System.out.println("El numero: " + i + " Es primo");
+            }  
+        }
+        System.out.println(" ");
+        System.out.println("Hay: " + contador + " numeros primos");
+        
+        // Ejercicio 2
+        System.out.println(" ");
+        System.out.println("Ejercicio 2");
+        for (int i = 1000; i <= 9999; i++){
+            esCapicua = FNumDaw.esCapicua(i);
+            if (esCapicua) {
+                System.out.println("El numero: " + i + " Es capicua");
+                contadorCapi++;
+            }
+        }
+        System.out.println(" ");
+        System.out.println("Hay: " + contadorCapi + " numeros capicua");
+
+
 
     }
 }

@@ -1,7 +1,6 @@
 package libreria;
 import java.util.Scanner;
- // Para commit
- // para
+
 
 public class FNumDaw {
     
@@ -181,6 +180,11 @@ public class FNumDaw {
         numero = sc.nextInt();
         boolean eskaprekar = kaprekar(numero);
         System.out.println(eskaprekar);
+
+
+        // Ejercicio posiciondedigito
+        int result1 = FNumDaw.posicionDeDigito(12345, 3);
+        System.out.println(result1); // Output: 2
 
     }
 }
