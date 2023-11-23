@@ -80,7 +80,7 @@ public class FNumDaw {
         return resultado;
     }
 
-     public static boolean kaprekar(int num){
+     public static boolean esKaprekar(int num){
         boolean EsKaprekar;
         int cuadrado = num * num;
         String cuadradoStr = String.valueOf(cuadrado);
@@ -93,95 +93,7 @@ public class FNumDaw {
         } else {
             EsKaprekar = false;
         }
-        
         return EsKaprekar;
-    }
-
-    // Libreria para vectores
-
-
-    public static void main(String[] args) {
-        int base;
-        int exponente;
-        double resultado;
-        int number;
-        int largaria;
-        int numero;
-        int numeroInvert;
-        int numCapi;
-        boolean esCapicua;
-        boolean esPrimo;
-        int primoSiguiente;
-        int primoAnterior;
-        int segundoNumero;
-        String concatenacion = "";
-
-        System.out.println("Ejercicio de: **Alvaro Escarti**");
-        Scanner sc = new Scanner(System.in);
-        
-        // Ejercicio 1
-        System.out.print("Dime la base: ");
-        base = sc.nextInt();
-        System.out.print("Dime el exponente: ");
-        exponente = sc.nextInt();
-        resultado = potencia(base, exponente);
-        System.out.println(resultado);
-        
-        // Ejercicio 2
-        System.out.print("Escribe un numero: ");
-        number = sc.nextInt();
-        largaria = cuentaDigitos(number);
-        System.out.println(largaria);
-
-        // Ejercicio 3
-        System.out.print("Escribe el numero para darle la vuelta: ");
-        numero = sc.nextInt();
-        numeroInvert = voltea(numero);
-        System.out.println(numeroInvert);
-
-        // Ejercicio 4
-        System.out.print("Escribe un numero para comprobar si es capicua: ");
-        numCapi = sc.nextInt();
-        esCapicua = esCapicua(numCapi);
-        System.out.println(esCapicua);
-
-        // Ejercicio 5
-        System.out.print("Escribe un numero para comprobar si es primo: ");
-        numero = sc.nextInt();
-        esPrimo = esPrimo(numero);
-        System.out.println(esPrimo);
-
-        // Ejercicio 6
-        System.out.print("Escribe un numero: ");
-        numero = sc.nextInt();
-        primoSiguiente = siguientePrimo(numero);
-        System.out.println("Has introducido: "+ numero + " y el primo siguiente es:  " + primoSiguiente);
-
-        // Ejercicio 7
-        System.out.print("Escribe un numero: ");
-        numero = sc.nextInt();
-        primoAnterior = anteriorPrimo(numero);
-        System.out.println("Has introducido: "+ numero + " y el primo anterior es:  " + primoAnterior);
-
-        // Ejercicio 8
-        System.out.print("Introduce dos numeros: ");
-        numero = sc.nextInt();
-        System.out.print("Escribe el segundo numero: ");
-        segundoNumero = sc.nextInt();
-        concatenacion = pegarNumeros(numero, segundoNumero);
-        System.out.println(concatenacion);
-
-        // Ejercicio kaprekar
-
-        System.out.print("Introduce un numero para saber si es kaprekar: ");
-        numero = sc.nextInt();
-        boolean eskaprekar = kaprekar(numero);
-        System.out.println(eskaprekar);
-
-
-        // Ejercicio posiciondedigito
-        int result1 = FNumDaw.posicionDeDigito(12345, 3);
-        System.out.println(result1); // Output: 2
-
-    }
+    }  // Libreria para vectores
 }
+
