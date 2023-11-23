@@ -2,7 +2,7 @@ import libreria.FNumDaw;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Ejercicio3 {
+public class AER100 {
     public static void main(String[] args) {
 
         boolean esKaprekar;
