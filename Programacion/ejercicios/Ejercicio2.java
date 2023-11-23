@@ -60,5 +60,7 @@ public class Ejercicio2 {
             System.out.println(primo);
             n--;
         }
+
+        // Acepta el reto 1
     }
 }

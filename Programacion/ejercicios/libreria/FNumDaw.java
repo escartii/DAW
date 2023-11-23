@@ -97,10 +97,7 @@ public class FNumDaw {
         return EsKaprekar;
     }
 
-    // LIbreria para vectores
-
-    
-
+    // Libreria para vectores
 
 
     public static void main(String[] args) {
