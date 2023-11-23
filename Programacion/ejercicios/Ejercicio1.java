@@ -6,11 +6,7 @@ public class Ejercicio1 {
     public static void main(String[] args) {
 
         boolean esPrimo;
-        boolean esCapicua;
         int contador = 0;
-        int contadorCapi = 0;
-        boolean bucle = true;
-        int iteracciones = 0;
 
         System.out.println("Ejercicio de: **Alvaro Escarti**");
         Scanner sc = new Scanner(System.in);
