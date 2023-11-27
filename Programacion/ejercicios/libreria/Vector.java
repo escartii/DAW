@@ -46,8 +46,8 @@ public class Vector {
         int media = 0;
         for (int i = 0; i < array.length; i++){
             suma = suma + array[i];
-            media = suma / 2;
         }
+        media = suma / array.length;
         return media;
     }
 
