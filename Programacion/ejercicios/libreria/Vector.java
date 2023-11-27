@@ -1,34 +1,56 @@
 package ejercicios.libreria;
-
 import java.util.Scanner;
 
 public class Vector {
-    public static String[] rellenaVectorStr(int numElem) {
-        Scanner sc = new Scanner(System.in);
-        String[] vecStr = new String[numElem];
-        for (int i = 0; i < numElem; i++) {
-            System.out.printf("Introduce el elemento %d:", i);
-            vecStr[i] = sc.nextLine();
+
+    public static int[] generaArrayInt(int largo, int minimo, int maximo) {
+        int[] array = new int[largo];
+
+        for (int i = 0; i < largo; i++){
+            int numeroAleatorio = (int)Math.floor(Math.random() * (maximo - minimo + 1) + minimo);
+            array[i] = numeroAleatorio;
         }
-        sc.close();
-        return vecStr;
+       
+        return array;
 
     }
 
-    public static String devuelveValoStr(int pos, String[] v) {
-        return v[pos];
-    }
 
-    public static boolean esIgualStr(String[]a, String[] b) {
-        boolean resultado = true;
-        if (a.length == b.length){
-            for (int i = 0; i < a.length; i++){
-                if (a[i] != b[i]){
-                    resultado = false;
-                }
+    public static int minimoArrayInt(int[] array) {
+        
+        int saberMinimo = array[0];
+
+        for (int i = 0; i <= array.length; i++){
+
+            if (saberMinimo > array[i] ){
+                saberMinimo = array[i];
             }
-            return resultado;
         }
-        return false;
+       
+        return saberMinimo;
+    }
+
+
+    public static void main(String[] args) {
+        int[] array;
+        int num;
+        int minimo;
+        int maximo;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Dime primer num: ");
+        num = sc.nextInt();
+        System.out.print("Dime el numero minimo: ");
+        minimo = sc.nextInt();
+        System.out.print("Dime el numero máximo: ");
+        maximo = sc.nextInt();
+
+        array = (generaArrayInt(num, minimo, maximo));
+
+        for (int i = 0; i < array.length ; i++) {
+            System.out.println(array[i]);
+        }
+
+        System.out.println(saberMinimo);
     }
 }
