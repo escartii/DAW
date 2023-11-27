@@ -20,7 +20,7 @@ public class Vector {
         
         int saberMinimo = array[0];
 
-        for (int i = 0; i <= array.length; i++){
+        for (int i = 1; i < array.length; i++){
 
             if (saberMinimo > array[i] ){
                 saberMinimo = array[i];
@@ -28,6 +28,27 @@ public class Vector {
         }
        
         return saberMinimo;
+    }
+
+    public static int maximoArrayInt(int[] array) {
+        // 8 5 9 6 3 7 2 7 2
+        int saberMaximo = array[0];
+        for (int i = 1; i < array.length; i++){
+            if (saberMaximo < array[i] ){
+                saberMaximo = array[i];
+            }
+        }
+        return saberMaximo;
+    }
+
+    public static int mediaArrayInt(int[] array) {
+        int suma = 0;
+        int media = 0;
+        for (int i = 0; i < array.length; i++){
+            suma = suma + array[i];
+            media = suma / 2;
+        }
+        return media;
     }
 
 
@@ -51,6 +72,9 @@ public class Vector {
             System.out.println(array[i]);
         }
 
-        System.out.println(saberMinimo);
+        int saberMinimo = minimoArrayInt(array);
+        System.out.println("El numero mas pequeño es: " + saberMinimo);
+
+
     }
 }
