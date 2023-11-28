@@ -64,4 +64,12 @@ public class Vector {
         }
         return encontrarNum;
     }
+
+    public static int[] volteaArrayInt(int[] array) {
+        int[] arrayVolteado = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            arrayVolteado[i] = array[array.length - 1 - i];
+        }
+        return arrayVolteado;
+    }
 }
