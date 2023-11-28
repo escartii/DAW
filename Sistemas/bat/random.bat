@@ -16,4 +16,6 @@ set /a "numero_aleatorio=%RANDOM% %% %numero_usuario% +1"
 
 echo El numero aleatorio entre 1 y %numero_usuario% es: %numero_aleatorio%
 
+
+
 :fin
