@@ -1,5 +1,4 @@
 package calculadoraRPN;
-
 import java.util.Scanner;
 
 public class calculadora {
@@ -11,8 +10,16 @@ public class calculadora {
         System.out.print("Escribe un numero entre 4 y 20: ");
         num = sc.nextLine();
 
-        int size = Integer.parseInt(num);
-        double[] registros = new double[size];
+        int numero = Integer.parseInt(num);
+        while (numero < 4 || numero > 20) {
+            System.out.println("El numero debe estar entre 4 y 20. Intenta de nuevo.");
+            System.out.print("Escribe un numero entre 4 y 20: ");
+            num = sc.nextLine();
+            numero = Integer.parseInt(num);
+        }
+
+        int tamaño = Integer.parseInt(num);
+        double[] registros = new double[tamaño];
 
         while (!salir) {
             int numrev = 0;
@@ -34,28 +41,28 @@ public class calculadora {
                     for (int i = 1; i <= registros.length - 1; i++) {
                         registros[i-1] = registros[i];
                     }
-                    registros[0] = temp;   
+                    registros[0] = temp;
                 }
                 if (num.equals("-")) {
                     double temp = registros[1] - registros[0];
                     for (int i = 1; i <= registros.length - 1; i++) {
                         registros[i-1] = registros[i];
                     }
-                    registros[0] = temp;   
+                    registros[0] = temp;
                 }
                 if (num.equals("*")) {
                     double temp = registros[1] * registros[0];
                     for (int i = 1; i <= registros.length - 1; i++) {
                         registros[i-1] = registros[i];
                     }
-                    registros[0] = temp;   
+                    registros[0] = temp;
                 }
                 if (num.equals("/")) {
                     double temp = registros[1] / registros[0];
                     for (int i = 1; i <= registros.length - 1; i++) {
                         registros[i-1] = registros[i];
                     }
-                    registros[0] = temp;   
+                    registros[0] = temp;
                 }
                 // ...
             } else {

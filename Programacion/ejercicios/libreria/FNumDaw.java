@@ -69,31 +69,6 @@ public class FNumDaw {
         return posicion;
     }
 
-    public static int parteNumero(int numero, int posicionInicial, int posicionFinal) {
-        String numeroString = String.valueOf(numero);
-        String trozo = numeroString.substring(posicionInicial, posicionFinal + 1);
-        return Integer.parseInt(trozo);
-    }
 
-    public static String pegarNumeros(int numero, int segundoNumero){
-        String resultado = (numero + "" + segundoNumero);
-        return resultado;
-    }
 
-     public static boolean esKaprekar(int num){
-        boolean EsKaprekar;
-        int cuadrado = num * num;
-        String cuadradoStr = String.valueOf(cuadrado);
-        int numDigitos = cuadradoStr.length();
-        int mitad = numDigitos / 2;
-        int primeraParte = Integer.parseInt(cuadradoStr.substring(0, mitad));
-        int segundaParte = Integer.parseInt(cuadradoStr.substring(mitad));
-        if (num == primeraParte + segundaParte) {
-            EsKaprekar = true;
-        } else {
-            EsKaprekar = false;
-        }
-        return EsKaprekar;
-    }  // Libreria para vectores
-}
 
