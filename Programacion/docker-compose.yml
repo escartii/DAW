@@ -1,0 +1,28 @@
+version: '2'
+services:
+  web:
+    image: httpd:latest
+    restart: always
+    volumes:
+      - ./:/app
+      - ./provisioning/etc/apache/sites-enabled/vhost.conf:/etc/apache/sites-enabled/vhost.conf
+      - ./provisioning/var/www/html/index.html:/var/www/html/index.html
+    depends_on:
+      - mysql
+    ports:
+      - "8006:80"
+  mysql:
+    image: mariadb:latest
+    volumes:
+      - dbdata:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=dbrootpass
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=dbpass
+    ports:
+      - "33006:3306"
+
+volumes:
+  dbdata:
