@@ -12,6 +12,8 @@ public class recursividad {
             res = fibonacci(N - 1) + fibonacci(N - 2);
         }
         return res;
+
+        // UNA FUNCIÍON QUE PASEMOS EL ORGANIGRAMA 
     }
     public static void main(String[] args) {
 
