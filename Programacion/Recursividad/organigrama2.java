@@ -1,17 +1,29 @@
-package Recursividad;
 import java.util.Scanner;
-public class organigrama {
+public class organigrama2 {
+
     public static String Organigrama(String[][] array, String empleado, String nivelJ) {
-        String result = "";
+        String result = "  ";
         for (int i = 0; i < array.length; i++)
             if (array[i][0].equals(empleado)) {
                 if (array[i][2].equals(nivelJ)) {
                     result = array[i][0];
+                    result += " ";
+                    result += array [i][1];
                 } else {
                     result = Organigrama(array, array[i][3],nivelJ);
                 }
             }
         return result;
+    };
+
+    public static String nombreEmpleado(String[][] array, String empleado, String nivelJ) {
+        String nombreEmpleado = "";
+        for (int i = 0; i < array.length; i++)
+            if (array[i][0].equals(empleado)) {
+                nombreEmpleado += array [i][1];
+                nombreEmpleado += " ";
+            }
+        return nombreEmpleado;
     };
 
     public static void main(String[] args) {
@@ -73,6 +85,7 @@ public class organigrama {
             {"1986", "Carmen", "3", "1066"},
             {"1997", "Oscar", "3", "1861"}
         };
+        System.out.print(nombreEmpleado(Organigrama, codEmpl, nivelJ));
         System.out.println(Organigrama(Organigrama, codEmpl, nivelJ));
     }
 }
