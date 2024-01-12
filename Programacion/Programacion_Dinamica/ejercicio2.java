@@ -29,10 +29,12 @@ public class ejercicio2 {
                     System.out.println("Cliente añadido");
                     break;
                     case 2:
+                    // Atendemos al cliente y lo sacamos de la cola con el metodo remove
                         clientes.remove();
                         System.out.println("Cliente atendido");
                         break;
                     case 3:
+                    // Muestro la cola con este bucle
                         Iterator<String> mostrarClientes = clientes.iterator();
                         while (mostrarClientes.hasNext()) {
                             System.out.println(mostrarClientes.next());
