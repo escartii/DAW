@@ -19,26 +19,32 @@ public class ejercicio2 {
             System.out.println("3. Mostrar cola");
             System.out.println("0. Salir");
             int respuesta = sc.nextInt();
-            System.out.println("");
             sc.nextLine();
             switch (respuesta) {
                 case 1:
                     System.out.print("Introduce el cliente: ");
                     String usuario = sc.nextLine();
                     clientes.add(usuario);
-                    System.out.println("Cliente añadido");
+                    // creo una variable que me diga la cantidad de elementos que hay en la cola
+                    int cantidadElementos = clientes.size();
+                    // Resto uno a la cantidad de elementos 
+                    cantidadElementos--;
+                    System.out.println("Cantidad de elementos en la cola: " + cantidadElementos);
                     break;
                     case 2:
-                    // Atendemos al cliente y lo sacamos de la cola con el metodo remove
+                        // Atendemos al cliente y lo sacamos de la cola con el metodo remove
                         clientes.remove();
                         System.out.println("Cliente atendido");
+                        System.out.println("Cantidad de elementos en la cola: " + clientes.size());
                         break;
                     case 3:
-                    // Muestro la cola con este bucle
+                        // Muestro la cola con este bucle
                         Iterator<String> mostrarClientes = clientes.iterator();
                         while (mostrarClientes.hasNext()) {
-                            System.out.println(mostrarClientes.next());
+                            System.out.print(mostrarClientes.next() + ",");
                         }
+                        System.out.println(" ");
+                        System.out.println("Cantidad de elementos en la cola:" + clientes.size());
                         break;
                     case 0:
                         System.exit(respuesta);
