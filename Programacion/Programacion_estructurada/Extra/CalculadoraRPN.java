@@ -41,7 +41,7 @@ public class CalculadoraRPN {
                 double num1 = registros.pop();
                 double multiplicar = num1 * num2;
                 registros.push(multiplicar);
-            } else if (entrada.equals("Q")) {
+            } else if (entrada.equals("q") || entrada.equals("Q")) {
                 salir = true;
             } else {
                 // Si se introduce un número, se guarda en el stack
