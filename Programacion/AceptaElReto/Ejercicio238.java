@@ -29,7 +29,7 @@ public class Ejercicio238 {
                 reparto.put(participante, new ArrayList<>());
 
                 // Leer los billetes asignados a este participante
-                for (int j = 0; j < numBilletes; j++) {
+                for (int j = 0; j < participante; j++) {
                     int billeteAsignado = scanner.nextInt();
                     reparto.get(participante).add(billeteAsignado);
                 }
@@ -37,14 +37,18 @@ public class Ejercicio238 {
 
             // Procesar y mostrar la salida
             for (int participante : reparto.keySet()) {
+                int totalDinero = 0;
                 System.out.print(participante + ":");
                 for (int billete : reparto.get(participante)) {
-                    System.out.print(" " + billete);
+                    totalDinero += billetes[billete - 1];
+                    System.out.print(" " + billetes[billete - 1]);
                 }
-                System.out.println();
+                System.out.println(totalDinero > 0 ? "\n" + totalDinero + ":" : "\n0:");
             }
 
             System.out.println("---");
         }
+
+        scanner.close();
     }
 }
