@@ -14,7 +14,13 @@
     Write-Host "11. Borrar usuario de un grupo"
     Write-Host "12. Salir"
 
-    $opcion = Read-Host "Ingrese el número de la opción deseada"
+    do {
+        $opcion = Read-Host "Ingrese el número de la opción deseada"
+
+        if ($opcion -lt 1 -or $opcion -gt 12) {
+            Write-Host "Ingrese un número válido (1-12)"
+        }
+    } while ($opcion -lt 1 -or $opcion -gt 12)
 
     switch ($opcion) {
         1 { Get-WmiObject Win32_UserAccount | Select-Object Name }
