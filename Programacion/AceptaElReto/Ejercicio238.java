@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Ejercicio238 {
@@ -11,40 +11,43 @@ public class Ejercicio238 {
             int numParticipantes = scanner.nextInt();
 
             if (numBilletes == 0 && numParticipantes == 0) {
-                break; // Salir si se ingresan dos ceros
+                break;
             }
 
-            // Leer los valores de los billetes
-            int[] billetes = new int[numBilletes];
+            ArrayList<Integer> billetes = new ArrayList<>();
             for (int i = 0; i < numBilletes; i++) {
-                billetes[i] = scanner.nextInt();
+                billetes.add(scanner.nextInt());
             }
 
-            // Inicializar HashMap para almacenar los billetes de cada participante
-            HashMap<Integer, ArrayList<Integer>> reparto = new HashMap<>();
-
-            // Leer la asignación de billetes a cada participante
-            for (int i = 0; i < numParticipantes; i++) {
-                int participante = scanner.nextInt();
-                reparto.put(participante, new ArrayList<>());
-
-                // Leer los billetes asignados a este participante
-                for (int j = 0; j < numBilletes; j++) {
-                    int billeteAsignado = scanner.nextInt();
-                    reparto.get(participante).add(billeteAsignado);
-                }
-            }
-
-            // Procesar y mostrar la salida
-            for (int participante : reparto.keySet()) {
-                System.out.print(participante + ":");
-                for (int billete : reparto.get(participante)) {
-                    System.out.print(" " + billete);
-                }
-                System.out.println();
-            }
-
+            repartirBotin(numParticipantes, billetes);
             System.out.println("---");
+        }
+    }
+
+    private static void repartirBotin(int numParticipantes, ArrayList<Integer> billetes) {
+        Collections.sort(billetes, Collections.reverseOrder());
+
+        ArrayList<ArrayList<Integer>> reparto = new ArrayList<>();
+        for (int i = 0; i < numParticipantes; i++) {
+            reparto.add(new ArrayList<>());
+        }
+
+        int index = 0;
+        for (int billete : billetes) {
+            reparto.get(index).add(billete);
+            index = (index + 1) % numParticipantes;
+        }
+
+        for (int i = 0; i < numParticipantes; i++) {
+            int total = reparto.get(i).stream().mapToInt(Integer::intValue).sum();
+            System.out.print(total + ": ");
+            for (int j = 0; j < reparto.get(i).size(); j++) {
+                System.out.print(reparto.get(i).get(j));
+                if (j < reparto.get(i).size() - 1) {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
         }
     }
 }
