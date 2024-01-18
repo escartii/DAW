@@ -5,7 +5,6 @@ public class Ejercicio702 {
     public static void main(String[] args) {
         int dinerotot = 0;
         Scanner sc = new Scanner(System.in);
-
         dinerotot = sc.nextInt();
         int agenda = sc.nextInt();
         sc.nextLine();
@@ -26,18 +25,15 @@ public class Ejercicio702 {
         }
 
         for (int i = 1; i <= 12; i++) {
-
             // Recorro el mapa
             for (String key : treemap.keySet()) {
                 // System.out.println("Fecha: " + key + ", Dinero: " + treemap.get(key));
                 // Me guardo en uan variable el dinero para poder iterar con el
                 String dineroo = treemap.get(key);
                 // System.out.println(dineroo);
-
-                // Compueba que Parte01 que es la del mes sea == i
+                // Compuebo que Parte01 que es la del mes sea == i
                 // si es igual sumas o restas y cuando acabes de recorrer el foreach muestra la
                 // suma total
-
                 String keyFecha = key.substring(0, 2);
                 int keyFechaInt = Integer.parseInt(keyFecha);
                 if (keyFechaInt == i) {
