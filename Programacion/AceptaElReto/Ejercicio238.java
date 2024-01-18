@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Ejercicio238 {
@@ -11,12 +11,12 @@ public class Ejercicio238 {
             int numParticipantes = scanner.nextInt();
 
             if (numBilletes == 0 && numParticipantes == 0) {
-                break; // Salir si se ingresan dos ceros
+                break;
             }
 
-            // Leer los valores de los billetes
-            int[] billetes = new int[numBilletes];
+            ArrayList<Integer> billetes = new ArrayList<>();
             for (int i = 0; i < numBilletes; i++) {
+<<<<<<< HEAD
                 billetes[i] = scanner.nextInt();
             }
 
@@ -44,11 +44,42 @@ public class Ejercicio238 {
                     System.out.print(" " + billetes[billete - 1]);
                 }
                 System.out.println(totalDinero > 0 ? "\n" + totalDinero + ":" : "\n0:");
+=======
+                billetes.add(scanner.nextInt());
+>>>>>>> 97cde85d7028ba4e6ca8944dab3e107efa74b345
             }
 
+            repartirBotin(numParticipantes, billetes);
             System.out.println("---");
         }
 
         scanner.close();
+    }
+
+    private static void repartirBotin(int numParticipantes, ArrayList<Integer> billetes) {
+        Collections.sort(billetes, Collections.reverseOrder());
+
+        ArrayList<ArrayList<Integer>> reparto = new ArrayList<>();
+        for (int i = 0; i < numParticipantes; i++) {
+            reparto.add(new ArrayList<>());
+        }
+
+        int index = 0;
+        for (int billete : billetes) {
+            reparto.get(index).add(billete);
+            index = (index + 1) % numParticipantes;
+        }
+
+        for (int i = 0; i < numParticipantes; i++) {
+            int total = reparto.get(i).stream().mapToInt(Integer::intValue).sum();
+            System.out.print(total + ": ");
+            for (int j = 0; j < reparto.get(i).size(); j++) {
+                System.out.print(reparto.get(i).get(j));
+                if (j < reparto.get(i).size() - 1) {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
