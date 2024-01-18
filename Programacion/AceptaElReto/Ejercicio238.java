@@ -5,13 +5,14 @@ import java.util.Scanner;
 public class Ejercicio238 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        boolean finPrograma = false;
 
-        while (true) {
+        while (!finPrograma) {
             int numBilletes = scanner.nextInt();
             int numParticipantes = scanner.nextInt();
 
             if (numBilletes == 0 && numParticipantes == 0) {
-                break;
+                finPrograma = true;
             }
 
             ArrayList<Integer> billetes = new ArrayList<>();
