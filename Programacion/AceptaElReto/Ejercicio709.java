@@ -2,51 +2,47 @@ package AceptaElReto;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class Ejercicio709 {
-
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        boolean finPrograma = false;
+        int equipos = Integer.parseInt(sc.next());
 
-        while (true) {
-            // Leer el número de votos
-            int n = scanner.nextInt();
-            if (n == 0) {
-                break;
-            }
-
-            // Leer las candidaturas
-            Map<String, Integer> conteo = new HashMap<>();
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < 4; j++) {
-                    String candidatura = scanner.next();
-                    conteo.put(candidatura, conteo.getOrDefault(candidatura, 0) + 1);
-                }
-            }
-
-            // Determinar la candidatura ganadora o si hay empate
+        while (!finPrograma) {
+            Map<String, Integer> votos = new TreeMap<String, Integer>();
             int maxVotos = 0;
-            String ganadora = "";
-            boolean empate = false;
+            String ganador = "";
 
-            for (Map.Entry<String, Integer> entry : conteo.entrySet()) {
-                if (entry.getValue() > maxVotos) {
-                    maxVotos = entry.getValue();
-                    ganadora = entry.getKey();
-                    empate = false;
-                } else if (entry.getValue() == maxVotos) {
-                    empate = true;
+            // Leer votos
+            for (int i = 0; i <= equipos; i++) {
+                String candidatura = sc.next();
+                votos.put(candidatura, votos.getOrDefault(candidatura, 0) + 1);
+                int numVotos = votos.get(candidatura);
+                if (numVotos > maxVotos) {
+                    maxVotos = numVotos;
+                    ganador = candidatura;
+                } else if (numVotos == maxVotos) {
+                    ganador = "EMPATE";
                 }
             }
 
-            // Imprimir el resultado
-            if (empate) {
-                System.out.println("EMPATE");
-            } else {
-                System.out.println(ganadora);
-            }
-        }
+            // Imprimir resultado
+            System.out.println(ganador);
 
-        scanner.close();
+            // Imprimir conteo de votos por país
+            for (Map.Entry<String, Integer> entry : votos.entrySet()) {
+                String pais = entry.getKey();
+                int votosPais = entry.getValue();
+                System.out.println(pais + ": " + votosPais);
+            }
+            votos.clear();
+            // Salir
+            if (equipos == 0) {
+                finPrograma = true;
+            }
+
+        }
     }
 }
