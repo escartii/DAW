@@ -5,7 +5,7 @@ do {
     Write-Host "1. Agregar usuarios a grupos"
     Write-Host "2. Crear grupo profesor y directorios"
     Write-Host "3. Establecer permisos"
-    Write-Host "0. Salir"
+    Write-Host "0. Salir".
 
     $opcion = Read-Host "Ingrese el número de la opción"
 
