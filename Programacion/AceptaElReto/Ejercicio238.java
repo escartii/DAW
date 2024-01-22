@@ -37,7 +37,7 @@ public class Ejercicio238 {
             reparto.get(index).add(billete);
             index = (index + 1) % numParticipantes;
         }
-
+        // test
         for (int i = 0; i < numParticipantes; i++) {
             int total = reparto.get(i).stream().mapToInt(Integer::intValue).sum();
             System.out.print(total + ": ");
