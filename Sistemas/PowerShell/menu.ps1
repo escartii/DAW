@@ -13,17 +13,11 @@
     Write-Host "10. Añadir usuario a grupo"
     Write-Host "11. Borrar usuario de un grupo"
     Write-Host "12. Salir"
-
-    do {
-        $opcion = Read-Host "Ingrese el número de la opción deseada"
-
-        if ($opcion -lt 1 -or $opcion -gt 12) {
-            Write-Host "Ingrese un número válido (1-12)"
-        }
-    } while ($opcion -lt 1 -or $opcion -gt 12)
-
+    $opcion = Read-Host "Ingrese el número de la opción"
     switch ($opcion) {
-        1 { Get-WmiObject Win32_UserAccount | Select-Object Name }
+        1 { 
+            Get-LocalUser 
+        }
         2 {
             $nombreUsuario = Read-Host "Ingrese el nombre del nuevo usuario"
             New-LocalUser -Name $nombreUsuario -Password (Read-Host -AsSecureString "Ingrese la contraseña")
@@ -41,10 +35,12 @@
             $nombreUsuario = Read-Host "Ingrese el nombre del usuario"
             Remove-LocalUser -Name $nombreUsuario
         }
-        6 { Get-WmiObject Win32_Group | Select-Object Name }
+        6 { 
+            Get-LocalGroup
+        }
         7 {
             $nombreGrupo = Read-Host "Ingrese el nombre del grupo"
-            Get-LocalGroupMember -Group $nombreGrupo | Select-Object Name
+            Get-LocalGroupMember -Group $nombreGrupo
         }
         8 {
             $nombreGrupo = Read-Host "Ingrese el nombre del nuevo grupo"
@@ -64,9 +60,14 @@
             $nombreGrupo = Read-Host "Ingrese el nombre del grupo"
             Remove-LocalGroupMember -Group $nombreGrupo -Member $nombreUsuario
         }
-        12 { break }
-        default { Write-Host "Opción no válida. Inténtelo de nuevo." }
+        12 { 
+            exit
+        }
+        default { 
+            Write-Host "Opción no válida. Inténtelo de nuevo." 
+        }
+        
     }
-
-    pause
+    Pause
 } while ($true)
+
