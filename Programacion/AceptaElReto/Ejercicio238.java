@@ -45,7 +45,7 @@ public class Ejercicio238 {
             for (int valor : participante) {
                 total += valor;
             }
-
+            
             StringBuilder resultado = new StringBuilder(total + ":");
             for (int i = 0; i < participante.size(); i++) {
                 resultado.append(" ").append(participante.get(i));
