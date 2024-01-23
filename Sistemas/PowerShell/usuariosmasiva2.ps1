@@ -1,5 +1,6 @@
 param (
-    [string]$rutaCSV = "C:\Users\escartii\Desktop\senia.csv"
+# Le pasamos la ruta 
+    [string]$rutaCSV = $1
 )
 
 # Validar la existencia del archivo CSV
