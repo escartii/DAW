@@ -15,11 +15,9 @@ if ($recursoExistente) {
     New-LocalUser Sara -NoPassword -AccountNeverExpires
     Add-LocalGroupMember -Group Usuarios -Member Miguel
     Add-LocalGroupMember -Group Usuarios -Member Sara
+    # Permisos -ChangeAccess Permisos de Escritura
+    #Permisos -FullControl Todos los permisos
+    #Permisos -ReadAccess Permisos solo de Lectura
     New-SmbShare -Name $nombreRecurso -Path $rutaDirectorio -ChangeAccess "Miguel" -ReadAccess "Sara"
     Write-Host "Recurso compartido $nombreRecurso creado exitosamente."
 }
-
-# Mostrar información detallada del recurso compartido
-Get-SmbShare -Name $nombreRecurso
-
-# También puedes agregar más lógica según tus necesidades, como configurar permisos NTFS, etc.
