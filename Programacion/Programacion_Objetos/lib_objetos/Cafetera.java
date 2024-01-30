@@ -24,7 +24,6 @@ public class Cafetera {
         }
     }
     // Getters y Setters
-
     public int getCapacidadMaxima(){
         return this.capacidadMaxima;
     }
@@ -53,10 +52,6 @@ public class Cafetera {
 
     public int getCantidadActual() {
         return this.cantidadActual;
-    }
-
-    public void setCantidadActual(int cantidadActual) {
-        this.cantidadActual = cantidadActual;
     }
 
 }   
