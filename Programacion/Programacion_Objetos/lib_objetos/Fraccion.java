@@ -7,8 +7,8 @@ public class Fraccion {
 
     public Fraccion(){
         // Constructor que crea la fraccion
-        this.numerador=1;
-        this.denominador=1;
+        this.numerador=2;
+        this.denominador=3;
     }
 
     public Fraccion(int numerador, int denominador){
@@ -24,32 +24,49 @@ public class Fraccion {
     }
 
     public void simplificar() {
-        int mcd = calcularMCD(this.numerador, this.denominador);
+        int mcd = Euclides(this.numerador, this.denominador);
         this.numerador /= mcd;
         this.denominador /= mcd;
     }
-
-    private int calcularMCD(int a, int b) {
+    // Metodo Euclides 
+    private int Euclides(int a, int b) {
         if (b == 0) {
             return a;
         }else {
-            return calcularMCD(b, a % b);
+            return Euclides(b, a % b);
         }
     }
 
     public void multiplicar(Fraccion otraFraccion) {
         this.numerador *= otraFraccion.numerador;
         this.denominador *= otraFraccion.denominador;
-        invertir();
-    }
 
+    }
+    
     public void dividir(Fraccion otraFraccion) {
-        this.numerador /= otraFraccion.denominador;
-        this.denominador /= otraFraccion.numerador;
+        this.numerador *= otraFraccion.denominador;
+        this.denominador *= otraFraccion.numerador;
+        
     }
     // Mostramos la fraccion 
     public void mostrar() {
         System.out.println(numerador + "/" + denominador);
+    }
+
+    public int getNumerador() {
+        return numerador;
+    }
+
+    public void setNumerador(int numerador) {
+        this.numerador = numerador;
+    }
+
+    public int getDenominador() {
+        return denominador;
+    }
+
+    public void setDenominador(int denominador) {
+        this.denominador = denominador;
     }
 
 }
