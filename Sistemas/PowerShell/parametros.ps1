@@ -1,4 +1,5 @@
 ﻿Param(
+    [Parameter(Mandatory=$true)]
     [string] $Primero,
     [string] $Segundo = "valor por defecto",
     [switch] $Tercero = $false,
