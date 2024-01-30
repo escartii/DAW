@@ -17,9 +17,10 @@ public class Fraccion {
         this.denominador = denominador;
     }
 
-    public void invertir(){
-        this.numerador = this.denominador;
-        this.denominador = this.numerador;
+    public void invertir() {
+        int temp = numerador;
+        numerador = denominador;
+        denominador = temp;
     }
 
     public void simplificar() {
@@ -39,6 +40,7 @@ public class Fraccion {
     public void multiplicar(Fraccion otraFraccion) {
         this.numerador *= otraFraccion.numerador;
         this.denominador *= otraFraccion.denominador;
+        invertir();
     }
 
     public void dividir(Fraccion otraFraccion) {
@@ -48,23 +50,6 @@ public class Fraccion {
     // Mostramos la fraccion 
     public void mostrar() {
         System.out.println(numerador + "/" + denominador);
-    }
-
-    // Getters y Setters
-    public int getNumerador() {
-        return numerador;
-    }
-
-    public void setNumerador(int numerador) {
-        this.numerador = numerador;
-    }
-
-    public int getDenominador() {
-        return denominador;
-    }
-
-    public void setDenominador(int denominador) {
-        this.denominador = denominador;
     }
 
 }

@@ -14,6 +14,14 @@ public class PruebaFraccion {
         f1.invertir();
         f1.mostrar();
 
+        System.out.print("Invertir Fracción 2: ");
+        f2.invertir();
+        f2.mostrar();
+
+        System.out.print("Simplificar Fracción 1: ");
+        f1.simplificar();
+        f1.mostrar();
+
         System.out.print("Simplificar Fracción 2: ");
         f2.simplificar();
         f2.mostrar();
