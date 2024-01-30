@@ -28,16 +28,28 @@ public class Cafetera {
         return this.capacidadMaxima;
     }
 
+    public int getCantidadActual() {
+        return this.cantidadActual;
+    }
+
+    public void setCapacidadMaxima(int capacidadMaxima) {
+        this.capacidadMaxima = capacidadMaxima;
+    }
+
+    public void setCantidadActual(int cantidadActual) {
+        this.cantidadActual = cantidadActual;
+    }
+
     // LLenamos la cafetera
     public int llenarCafetera() {
         return capacidadMaxima;
     }
     // Servimos
     public void servirTaza(int capacidadTaza) {
-        if (cantidadActual >= capacidadTaza) {
-            cantidadActual -= capacidadTaza;
-        } else {
+        if (capacidadTaza > this.cantidadActual) {
             this.cantidadActual = 0;
+        }else{
+            this.cantidadActual -= capacidadTaza;
         }
     }
     //Vaciamos
@@ -49,10 +61,5 @@ public class Cafetera {
     public void agregarCafe(int cantidad) {
         this.cantidadActual += cantidad;
     }
-
-    public int getCantidadActual() {
-        return this.cantidadActual;
-    }
-
 }   
 
