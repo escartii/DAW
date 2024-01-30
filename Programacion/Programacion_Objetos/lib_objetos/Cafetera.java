@@ -41,8 +41,8 @@ public class Cafetera {
     }
 
     // LLenamos la cafetera
-    public int llenarCafetera() {
-        return capacidadMaxima;
+    public void llenarCafetera() {
+        this.cantidadActual = this.capacidadMaxima;
     }
     // Servimos
     public void servirTaza(int capacidadTaza) {
