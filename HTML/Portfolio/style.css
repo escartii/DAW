@@ -1,0 +1,86 @@
+body {
+    font-family: 'Geist', sans-serif;
+    font-weight:bold;
+    font-style: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+header {
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%); 
+    font-family: 'Geist', sans-serif;
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #0056b3;
+}
+
+section {
+    font-family: 'Geist', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    color: #000; /* Cambiado a negro */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto {
+    margin-bottom: 20px;
+}
+
+/* Cambiado a negro */
+section a {
+    color: #000;
+}
+
+footer {
+
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%); 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+
+.foto{
+    /* Tamaño de la imagen y la hago redonda*/
+    width: 12%;
+    border-radius: 50%;
+}
