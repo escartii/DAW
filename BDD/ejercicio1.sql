@@ -18,7 +18,6 @@ AND MONTH(f1.fechacreacion) = 01
 AND f1.idUsuario=33;
 
 #Ejercicio3:
-
 #Comentarios del usuario36 sobre la foto12 del usuario11
 select * from comentarios,fotos
 WHERE comentarios.idUsuario = 36
