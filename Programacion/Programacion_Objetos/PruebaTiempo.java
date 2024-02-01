@@ -35,12 +35,7 @@ public class PruebaTiempo {
         miLista.add(t8.toString());
         miLista.add(t9.toString());
         miLista.add(t10.toString());
-        // Comparamos cual es el mayor 
-        if (t1.getHoras() > t2.getHoras()) {
-            System.out.println("La hora mayor es: " + t1.toString());
-        } else {
-            System.out.println("La hora mayor es: " + t2.toString());
-        }
+      
         ordenarLista(miLista);
         System.out.println("Lista ordenada: ");
         for (String horas : miLista) {
