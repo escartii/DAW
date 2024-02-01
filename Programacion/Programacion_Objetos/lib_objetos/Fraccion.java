@@ -7,8 +7,8 @@ public class Fraccion {
 
     public Fraccion(){
         // Constructor que crea la fraccion
-        this.numerador=2;
-        this.denominador=3;
+        this.numerador=1;
+        this.denominador=1;
     }
 
     public Fraccion(int numerador, int denominador){
