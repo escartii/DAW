@@ -1,0 +1,33 @@
+#Ejercicio 1
+git config --global user.name "Your-Full-Name"
+git config --global user.email "your-email-address"
+git config --global color.ui auto
+git config --list
+
+#Ejercicio2
+mkdir libro
+cd libro
+git init
+ls -la
+
+#Ejercicio3
+git status
+vim indice.txt
+git status
+git add indice.txt
+git status
+
+#Ejercicio4
+git commit -m "Añadido índice del libro."
+git status
+
+#Ejercicio5
+vim indice.txt
+git diff
+git add indice.txt
+git commit -m "Añadido capítulo 3 sobre gestión de ramas"
+
+#Ejercicio6
+git show
+git commit --amend -m "Añadido capítulo 3 sobre gestión de ramas al índice."
+git show
