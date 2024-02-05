@@ -34,8 +34,8 @@ where YEAR(fechaCreacion) = 2024
 AND MONTH(fechacreacion) = 01
 AND fotos.idUsuario = 33
 AND fotos.idUsuario = usuarios.idUsuario;
-###
 
+###
 SELECT usuarios.nombre,comentarios.comentario,fotos.url
 	FROM comentarios,fotos,usuarios, comentariosFotos
     WHERE fotos.idUsuario = 11
@@ -44,6 +44,11 @@ SELECT usuarios.nombre,comentarios.comentario,fotos.url
         AND comentariosFotos.idFoto = fotos.idFoto
         AND fotos.idUsuario = 11
         AND comentarios.idComentario = comentariosFotos.idComentario;
+
+
+#Numero de fotos tomadas en la playa 
+SELECT COUNT(*) FROM fotos
+WHERE fotos.descripcion LIKE '%playa%';
 
 
 
