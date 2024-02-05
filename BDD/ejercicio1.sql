@@ -37,13 +37,13 @@ AND fotos.idUsuario = usuarios.idUsuario;
 ###
 
 SELECT usuarios.nombre,comentarios.comentario,fotos.url
-FROM comentarios,fotos,usuarios, comentariosFotos
-WHERE fotos.idUsuario = 11
-AND usuarios.idUsuario = 36
-AND usuarios.idUsuaricomentarioo = comentarios.idUsuario
-AND comentariosFotos.idFoto = fotos.idFoto
-AND fotos.idUsuario = 11
-AND comentarios.idComentario = comentariosFotos.idComentario;
+	FROM comentarios,fotos,usuarios, comentariosFotos
+    WHERE fotos.idUsuario = 11
+        AND usuarios.idUsuario = 36
+        AND usuarios.idUsuario = comentarios.idUsuario
+        AND comentariosFotos.idFoto = fotos.idFoto
+        AND fotos.idUsuario = 11
+        AND comentarios.idComentario = comentariosFotos.idComentario;
 
 
 
