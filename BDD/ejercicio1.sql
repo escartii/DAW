@@ -23,3 +23,16 @@ select * from comentarios,fotos
 WHERE comentarios.idUsuario = 36
 AND fotos.idFoto = 12
 AND fotos.idUsuario = 11;
+
+#Sacar los comentarios del usuario4
+select * from comentarios
+where comentarios.idUsuario=4;
+
+#Sacar el nombre y la URL del Ejercicio2
+SELECT fotos.url,usuarios.nombre FROM fotos,usuarios
+where YEAR(fechaCreacion) = 2024  
+AND MONTH(fechacreacion) = 01
+AND fotos.idUsuario = 33
+AND fotos.idUsuario = usuarios.idUsuario;
+
+

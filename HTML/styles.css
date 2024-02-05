@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: url('./fondo.jpg') center center fixed no-repeat;
@@ -52,5 +53,14 @@ td, th {
     border-spacing: 50px;
 }
 
-
+/* Pinta las columnas impares*/
+table td:nth-child(odd){
+    background-color: hsl(0, 0%, 15%);
+    color: white;
+}
+/* Cambia la fila de color */
+table tr:hover td{
+    background-color: hsl(0, 57%, 50%);
+    color: white;
+}
 
