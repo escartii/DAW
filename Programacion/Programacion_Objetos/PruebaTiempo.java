@@ -5,6 +5,7 @@ import java.util.List;
 public class PruebaTiempo {
 
     public static void main(String[] args) {
+        // esto es un objeto
         Tiempo t1 = new Tiempo(02, 59, 3);
         Tiempo t2 = new Tiempo(01, 59, 3);
         Tiempo t3 = new Tiempo();
