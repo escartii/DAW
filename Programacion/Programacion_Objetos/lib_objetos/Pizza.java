@@ -65,7 +65,7 @@ public class Pizza {
     public static int getTotalPedidas() {
         return totalPedidas;
     }
-
+    // se pone static para que pueda ser llamado desde el main
     public static int getTotalServidas() {
         return totalServidas;
     }
