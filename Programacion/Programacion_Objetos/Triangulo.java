@@ -18,7 +18,7 @@ public class Triangulo extends Figura {
     // Método para calcular el perímetro del triángulo
     @Override
     public double perimetro() {
-        return base + altura + Math.sqrt((base * base) + (altura * altura)); // Retorna el resultado del cálculo del perímetro del triángulo
+        return base + 2* Math.sqrt((base * base) /4 + (altura * altura)); // Retorna el resultado del cálculo del perímetro del triángulo
     }   
     
 }
