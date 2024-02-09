@@ -1,48 +1,31 @@
 public class Vehiculos {
-    private int vehiculosCreados = 0;
+    // static es para poder acceder desde todos los programas
+    private static int vehiculosCreados = 0;
     private int kilometrosRecorridos = 0;
+    private static int kilometrosTotales = 0;
 
-    public Vehiculos(int km) {
+    // Constructor
+    public Vehiculos() {
         vehiculosCreados++;
-        kilometrosRecorridos += km;
     }
 
-    public int getVehiculosCreados() {
+    public void recorrer (int km){
+        kilometrosRecorridos += km;
+        // me guardo en kilometros totales la suma de todos los kilometros recorridos
+        kilometrosTotales += km;
+    }
+
+    // Getters y Setters
+    public static int getVehiculosCreados() {
         return vehiculosCreados;
     }
-
-    public class coche extends Vehiculos {
-
-        public coche() {
-            super(0); // Call the constructor of the superclass with 0 as the argument
-        }
-        
-        public void recorrer(int distancia) {
-            kilometrosRecorridos += distancia;
-        }
-    }
-
-    public class bicicleta extends Vehiculos {
-        public bicicleta() {
-            super(0);
-        }
-
-        public void recorrer(int distancia) {
-            kilometrosRecorridos += distancia;
-        }
-    }
-
+     
     public int getKilometrosRecorridos() {
         return kilometrosRecorridos;
     }
 
-    public void setVehiculosCreados(int vehiculosCreados) {
-        this.vehiculosCreados = vehiculosCreados;
+    public static int getKilometrosTotales() {
+        return kilometrosTotales;
     }
 
-    public void setKilometrosRecorridos(int kilometrosRecorridos) {
-        this.kilometrosRecorridos = kilometrosRecorridos;
-    }
-
-    
 }
