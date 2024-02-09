@@ -52,3 +52,6 @@ WHERE fotos.descripcion LIKE '%playa%';
 
 
 
+
+
+

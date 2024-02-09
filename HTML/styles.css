@@ -1,11 +1,9 @@
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: url('./fondo.jpg') center center fixed no-repeat;
     background-size: cover;
     background-attachment: fixed; /* La imagen de fondo se mantiene fija */
 }
-
 
 h1 {
     background: linear-gradient(to right, #ffcc00, #ff9900);
@@ -34,6 +32,15 @@ blockquote {
 }
 
 
+/* Ejercicio 4.15 */
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 2px solid black;
+}
+
 img {
     display: block;
     margin: 0 auto;
@@ -58,9 +65,11 @@ table td:nth-child(odd){
     background-color: hsl(0, 0%, 15%);
     color: white;
 }
+
 /* Cambia la fila de color */
 table tr:hover td{
     background-color: hsl(0, 57%, 50%);
     color: white;
 }
+/* END: be15d9bcejpp */
 
