@@ -92,7 +92,6 @@ public class Boing {
                             } catch (Exception e) {
                                 System.out.println(e);
                             }
-                            System.err.println("añado 1 y modifico 2");
                 
                         }
                         if (camp.colision(objs.get(j))) {
