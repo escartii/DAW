@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.TreeSet;
 
 public class Boing {
+    private static int cont2 = 0;
 
     private static ArrayList<Objeto> objs = new ArrayList<Objeto>();
     private static TreeSet<Posicion> campo = new TreeSet<Posicion>();
@@ -41,10 +42,12 @@ public class Boing {
                 System.out.print(" ");
             }
             x = pos.getX();
-            System.out.print("*");
+            System.out.print("\u2588");
+            
 
         }
         System.out.println();
+        System.out.println("SCORE: " + cont2);
     }
 
     ////////////////////////////////////
@@ -52,7 +55,6 @@ public class Boing {
     //////////////////////////////////// que se muevan)
     ///////////////////////////////////
     public static void boing(Campo camp, ArrayList<Objeto> objetos) {
-        int cont2 = 0;
 
         objs.add(camp);
 
@@ -85,26 +87,11 @@ public class Boing {
                     if (objs.get(i) instanceof Triangulo || objs.get(j) instanceof Triangulo) {
                         if (choc) { 
                             cont2++;
-                            System.out.println(cont2);
                             Triangulo.setContColi(cont2);
-                            try {
-                                Thread.sleep(1000);
-                            } catch (Exception e) {
-                                System.out.println(e);
-                            }
-                
                         }
                         if (camp.colision(objs.get(j))) {
                             cont2++;
-                            
-                            Triangulo.setContColi(cont2);
-                            System.out.println(cont2);
-
-                            try {
-                                Thread.sleep(1000);
-                            } catch (Exception e) {
-                                System.out.println(e);
-                            }
+                            Triangulo.setContColi(cont2); 
                         }
 
                     }
