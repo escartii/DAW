@@ -23,7 +23,6 @@ public class LanzaBoing {
 
         Boing.boing(camp, objs);
 
-        System.out.println("2 aqui");
     }
 
 }

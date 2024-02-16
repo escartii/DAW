@@ -1,6 +1,7 @@
 public class Vehiculos {
     // static es para poder acceder desde todos los programas
     private static int vehiculosCreados = 0;
+    // Esto es un atributo de instancia
     private int kilometrosRecorridos = 0;
     private static int kilometrosTotales = 0;
 
