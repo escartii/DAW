@@ -10,7 +10,7 @@ public class Pruebas {
      */
     public static void main(String[] args) {
         
-        ArrayList<Campeones> champs = new ArrayList<Campeones>();
+        ArrayList<Campeones> champs = new ArrayList<>();
         
         champs.add(new Campeones());
         champs.add(new Campeones("Vayne"));

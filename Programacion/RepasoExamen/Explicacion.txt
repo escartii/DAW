@@ -1,0 +1,32 @@
+La programación orientada a objetos (POO) es un paradigma de programación que utiliza objetos como bloques básicos de construcción. Los objetos se componen de atributos (que almacenan datos) y métodos (que definen acciones).
+
+Pilares fundamentales de la POO:
+
+1. Encapsulamiento:
+
+Definición: Oculta los detalles internos de un objeto, exponiendo solo una interfaz pública.
+Beneficios: Mayor seguridad, flexibilidad y facilidad de mantenimiento.
+Ejemplo: Una clase Coche puede tener un atributo privado motor y un método público encenderMotor().
+2. Abstracción:
+
+Definición: Define una clase o interfaz en términos de sus características esenciales sin especificar su implementación.
+Beneficios: Permite enfocarse en el "qué" sin preocuparse por el "cómo".
+Ejemplo: Una clase abstracta Animal puede definir un método abstracto comer(), que será implementado por clases específicas como Perro o Gato.
+3. Herencia:
+
+Definición: Permite que una clase (subclase) herede los atributos y métodos de otra clase (superclase).
+Beneficios: Reutilización de código, mayor flexibilidad y facilidad de mantenimiento.
+Ejemplo: Una clase Perro puede heredar de una clase Animal sus atributos como nombre y especie, y su método comer().
+4. Polimorfismo:
+
+Definición: Permite que diferentes objetos respondan al mismo mensaje de diferentes maneras.
+Tipos:
+Sobrecarga de métodos: Mismo nombre, diferentes parámetros.
+Sobreescritura de métodos: Mismo nombre, misma firma, diferente implementación.
+Ejemplo: Una clase Perro puede tener un método comer() que implementa cómo come un perro, mientras que una clase Gato tiene su propia implementación del mismo método.
+Otros conceptos importantes:
+
+Atributos: Variables que definen las características de un objeto.
+Métodos: Funciones que definen las acciones que un objeto puede realizar.
+Clases: Plantillas que definen la estructura y el comportamiento de un objeto.
+Objetos: Instancias de una clase que contienen datos y comportamiento.
