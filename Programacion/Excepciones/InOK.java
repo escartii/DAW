@@ -2,14 +2,13 @@ package Programacion.Excepciones;
 import java.util.Scanner;
 
 public class InOK {
-    static Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
 
     public static void Leeint() {
-        int comprobar = 0;
         
         try {
-            System.out.println("Primera función");
-            comprobar = sc.nextInt();
+            System.out.println("Primera Excepción");
+            sc.nextInt();
         } catch (Exception e) {
             System.out.println("Error, no es un numero entero.");
             sc.nextLine();
@@ -23,7 +22,7 @@ public class InOK {
 
         while (!esPositivo) {
             try {
-                System.out.println("Segunda función");
+                System.out.println("Segunda Excepción");
                 numero = sc.nextInt();
                 if (numero > 0) {
                     esPositivo = true;
@@ -43,9 +42,10 @@ public class InOK {
     }
     //
 
-
     public static void LeeIntRango (){
+
         try {
+            System.out.println("Tercera Excepción");
             int num = sc.nextInt();
             if ((num > 100) || (num < 0)) {
                 throw new Exception("Número fuera del rango [0,100]");
@@ -61,50 +61,51 @@ public class InOK {
 
     }
 
+    public static void LeeDou (){
+
+		try {
+            System.out.println("Cuarta excepción");
+            // Double para coger el numero real 
+            if (sc.hasNextDouble()) {
+            }else{
+                throw new Exception("No has introducido un número real");
+            }
+        } catch (Exception e) {
+            if (e.getMessage() == null) {
+                System.out.println("No has introducido un número real");
+            }else{
+                System.out.println(e.getMessage());
+                sc.nextLine();
+            }
+        }
+    }
+
+    public static void LeeDouRango(){
+        
+        double num = 0;
+        Scanner ss = new Scanner(System.in);
+        try {
+            System.out.println("Quinta Excepción");
+            num = ss.nextDouble();
+            if ((num > 100.0) || (num < 0.0)) {
+                throw new Exception("Número fuera del rango [0,100]");
+            }
+        } catch (Exception e) {
+            if (e.getMessage() == null) {
+                System.out.println("No has introducido un número real");
+            } else {
+                System.out.println(e.getMessage());
+                ss.nextLine();
+            }
+        }
+        
+    }
     public static void main(String[] args) {
         // Llamo al metodo
         Leeint();
         LeeIntPos();
         LeeIntRango();
-
-        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣴⣦⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⣶⣿⣿⣿⣿⣿⣿⣿⣷⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⠿⣿⣿⡂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⠟⠉⠀⠐⠀⠀⠀⠀⠈⢿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⢿⣿⣿⡆⠀⢀⣠⣄⣤⣀⡄⣀⣀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣎⠀⠀⣾⡷⣯⣿⡟⠀⢿⣯⣍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡏⡏⡛⠇⠀⠀⠀⠈⠉⢈⡠⢀⣈⠍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣥⣷⣋⢸⣆⠀⠀⢀⠠⢟⣻⣿⣟⡃⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢣⣷⡎⣿⣿⣾⡁⣴⣿⣿⢿⠿⣷⡀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠈⠁⢹⣿⣿⣿⣿⣿⣾⣶⡆⣼⡵⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⢠⢸⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠀⠀⢣⣾⣿⢿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣮⢻⣷⣄⠀⢉⡞⣯⢷⡿⣿⣭⡀⠀⢤⠄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⣿⣿⣿⣷⣝⢿⣆⠰⢨⢅⠂⡹⣆⡍⡀⢀⣎⣮⢱⣉⢆⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣐⣾⣟⣾⣿⣿⣿⣿⣿⣶⣿⣿⣧⣎⣧⠀⢡⠆⢀⣰⡽⣯⣿⣟⣮⣶⣩⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣔⣺⡽⣳⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣟⣿⣽⣟⣿⣻⣿⣷⣾⠰⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⢀⣜⣳⣞⣷⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⢾⡽⣟⣿⣯⣿⣽⣿⣯⣿⣞⣷⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⢀⠾⣼⣳⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣿⣟⣿⣯⣟⣿⣷⣿⢾⣷⣿⣟⣾⣟⣾⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⡿⣾⣻⣷⣿⣿⣿⣾⣿⣷⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⣀⠒⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣽⣿⢿⣿⣷⣻⣿⣾⣷⡬⡪⡴⢎⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠬⠁⢃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠹⠿⢛⣩⣽⣾⣿⣻⣞⣷⣻⣷⣿⣄⠻⢅⣼⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠸⣦⡀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣾⣿⣿⣿⣽⣿⣽⣿⣳⢿⣿⣾⣿⣿⣺⢿⣿⣿⣇⢀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⡸⣦⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣷⣯⢿⣟⣾⣿⣿⣿⣻⣿⣿⣣⣷⡄⠀⠀⠀⠀⠀\n" + //
-                        "⠀⣰⣻⡽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡿⣟⣿⣞⣯⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣁⠤⠀⠂⠀⠀\n" + //
-                        "⠠⢿⣼⣿⣿⣿⣿⣿⣿⣿⠟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢠⣌⠹⡟⢛⠛⡇⠺⢉⠉⣎⢋⢈⡻⡉⠏⢹⣿⣿⣷⣿⣍⡶⠆⠈⢀⠆\n" + //
-                        "⢻⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠨⣍⠰⡀⢿⠇⠁⢀⠻⡆⠿⢸⠸⢇⠤⠆⣿⣿⣿⣿⣿⣽⡴⠆⠐⠁⠤\n" + //
-                        "⠸⡭⢟⣿⣿⣿⣿⣿⣇⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣶⣷⣶⠶⠾⠚⠓⠚⢒⣚⣓⣾⣶⣿⣿⣿⣿⣿⣿⣿⣷⣗⡈⢀⠀\n" + //
-                        "⠀⠑⣫⣾⣿⣿⣿⣿⣿⣆⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⡿⣿⣿⣿⣿⣿⠻⠿⠿⠿⠿⠿⠿⠟⠋⠀⠀\n" + //
-                        "⠀⠀⠐⠝⣾⣿⣿⣿⣿⣿⣆⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠈⢻⣞⣿⣿⢿⣿⣿⣧⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠹⣟⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⢿⣿⣻⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⡟⠉⠀⡀⠀⠱⣍⠛⢛⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣾⣹⢿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠙⠻⣿⣾⠏⠀⣤⣄⡑⣧⡄⠈⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣿⢷⣿⣽⣿⡙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠱⡀⠰⣦⣙⡻⣿⣿⣿⣦⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣻⢿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⢮⣝⠻⠭⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⡿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" + //
-                        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠊⠙⠛⠚⠋⠛⠛⠛⠛⠛⠛⠛⠛⠛⠙⠛⠛⠙⠛⠛⠛⠃⠉⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
-
-
-
+        LeeDou();
+        LeeDouRango();
     }
 }
