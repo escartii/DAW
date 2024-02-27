@@ -55,7 +55,6 @@ public class InOK {
                 System.out.println("No has introducido un número");
             }else{
                 System.out.println(e.getMessage());
-                sc.nextLine();
             }
         }
 
@@ -67,6 +66,7 @@ public class InOK {
             System.out.println("Cuarta excepción");
             // Double para coger el numero real 
             if (sc.hasNextDouble()) {
+                System.out.println("es numero real");
             }else{
                 throw new Exception("No has introducido un número real");
             }
@@ -75,18 +75,15 @@ public class InOK {
                 System.out.println("No has introducido un número real");
             }else{
                 System.out.println(e.getMessage());
-                sc.nextLine();
             }
         }
     }
 
     public static void LeeDouRango(){
-        
-        double num = 0;
         Scanner ss = new Scanner(System.in);
         try {
             System.out.println("Quinta Excepción");
-            num = ss.nextDouble();
+            double num = sc.nextDouble();
             if ((num > 100.0) || (num < 0.0)) {
                 throw new Exception("Número fuera del rango [0,100]");
             }
@@ -95,17 +92,17 @@ public class InOK {
                 System.out.println("No has introducido un número real");
             } else {
                 System.out.println(e.getMessage());
-                ss.nextLine();
+                sc.nextLine();
             }
         }
         
     }
     public static void main(String[] args) {
         // Llamo al metodo
+        LeeDouRango();
         Leeint();
         LeeIntPos();
         LeeIntRango();
         LeeDou();
-        LeeDouRango();
     }
 }
