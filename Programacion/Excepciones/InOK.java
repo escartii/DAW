@@ -1,11 +1,11 @@
-package Programacion.Excepciones;
 import java.util.Scanner;
 
 public class InOK {
     private static Scanner sc = new Scanner(System.in);
+    public static final String[] COMPOSITORES = {"Bach", "Haydn", "Mozart", "Beethoven","Brahms", "Mahler", "Bartok"};
 
     public static void Leeint() {
-        
+
         try {
             System.out.println("Primera Excepción");
             sc.nextInt();
@@ -16,7 +16,7 @@ public class InOK {
 
     }
 
-    public static void LeeIntPos(){
+    public static void LeeIntPos() {
         int numero = 0;
         boolean esPositivo = false;
 
@@ -30,19 +30,19 @@ public class InOK {
                     throw new Exception("Error, el número debe ser positivo.");
                 }
             } catch (Exception e) {
-                //getMessage lo coge de la nueva excepcion que hemos sacado
+                // getMessage lo coge de la nueva excepcion que hemos sacado
                 if (e.getMessage() == null) {
                     System.out.println("No has introducido un número");
-                }else{
+                } else {
                     System.out.println(e.getMessage());
                     sc.nextLine();
                 }
             }
-        } 
+        }
     }
     //
 
-    public static void LeeIntRango (){
+    public static void LeeIntRango() {
 
         try {
             System.out.println("Tercera Excepción");
@@ -53,37 +53,37 @@ public class InOK {
         } catch (Exception e) {
             if (e.getMessage() == null) {
                 System.out.println("No has introducido un número");
-            }else{
+            } else {
                 System.out.println(e.getMessage());
             }
         }
 
     }
 
-    public static void LeeDou (){
+    public static void LeeDou() {
 
-		try {
+        try {
             System.out.println("Cuarta excepción");
-            // Double para coger el numero real 
+            // Double para coger el numero real
             if (sc.hasNextDouble()) {
                 System.out.println("es numero real");
-            }else{
+            } else {
                 throw new Exception("No has introducido un número real");
             }
         } catch (Exception e) {
             if (e.getMessage() == null) {
                 System.out.println("No has introducido un número real");
-            }else{
+            } else {
                 System.out.println(e.getMessage());
             }
         }
     }
 
-    public static void LeeDouRango(){
+    public static void LeeDouRango() {
         Scanner ss = new Scanner(System.in);
         try {
             System.out.println("Quinta Excepción");
-            double num = sc.nextDouble();
+            double num = ss.nextDouble();
             if ((num > 100.0) || (num < 0.0)) {
                 throw new Exception("Número fuera del rango [0,100]");
             }
@@ -92,17 +92,38 @@ public class InOK {
                 System.out.println("No has introducido un número real");
             } else {
                 System.out.println(e.getMessage());
-                sc.nextLine();
+                ss.nextLine();
             }
         }
-        
     }
+    public static void LeeString() {
+        Scanner ss = new Scanner(System.in);
+        boolean encontrado = true;
+        try {
+            System.out.println("Introduce un String:");
+            String entrada = ss.nextLine();
+
+            for (int i = 0; i < COMPOSITORES.length; i++) {
+                if (COMPOSITORES[i].equals(entrada)) {
+                    System.out.println("El String existe en el array. Índice: " + i);
+                }
+
+            }
+            if (!encontrado) {
+                throw new Exception("El String no existe en el array.");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
         // Llamo al metodo
-        LeeDouRango();
         Leeint();
         LeeIntPos();
         LeeIntRango();
         LeeDou();
+        LeeDouRango();
+        LeeString();
     }
 }
