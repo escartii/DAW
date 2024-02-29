@@ -2,8 +2,8 @@ public class Pieza {
     private String nombre;
     private String color;
     
-    public Pieza (){
-
+    public Pieza () {
+        
     }
     public Pieza(String nombre, String color){
         this.nombre = nombre;
@@ -20,4 +20,5 @@ public class Pieza {
         this.nombre.equals(p.nombre) &&
         this.area() == p.area();
     }
+
 }

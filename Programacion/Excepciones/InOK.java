@@ -96,9 +96,10 @@ public class InOK {
             }
         }
     }
+
     public static void LeeString() {
         Scanner ss = new Scanner(System.in);
-        boolean encontrado = true;
+        boolean encontrado = false;
         try {
             System.out.println("Introduce un String:");
             String entrada = ss.nextLine();
@@ -107,12 +108,12 @@ public class InOK {
                 if (COMPOSITORES[i].equals(entrada)) {
                     System.out.println("El String existe en el array. Índice: " + i);
                 }
-
             }
             if (!encontrado) {
-                throw new Exception("El String no existe en el array.");
+                throw new ElementoNoExistente("El elemento no existe en el array COMPOSITORES.");
             }
-        } catch (Exception e) {
+            
+        } catch (ElementoNoExistente e) {
             System.out.println(e.getMessage());
         }
     }
