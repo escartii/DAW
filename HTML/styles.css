@@ -77,3 +77,39 @@ table tr:hover td{
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
  background-blend-mode: multiply,multiply;
 }
+
+.titulo {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    background-color: hsl(0, 0%, 0%);
+    border: 2px solid black;
+}
+
+.titulo2 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    background-color: hsl(0, 59%, 50%);
+    border: 2px solid black;
+}
+
+.titulo3 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    background-color: hsl(145, 100%, 18%);
+    border: 2px solid black;
+}
+
+.titulo4 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    background-color: hsl(145, 39%, 79%);
+    border: 2px solid black;
+}
