@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Ask for user input (optional)
 read -p "Introduce el usuario " usuario
 if [ -z "$usuario" ]; then
   usuario=`whoami`
@@ -13,6 +12,5 @@ if [ ! -d "$directorio" ]; then
   echo "El $directorio ha sido creado."
 fi
 
-# Copy all files to the target directory
 cp -r * "$directorio"
 echo "Ficheros copiados $directorio."
