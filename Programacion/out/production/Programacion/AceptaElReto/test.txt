@@ -1,0 +1,18 @@
+150 17
+01-01 +30 Regalo tio
+01-02 -10 Cenar con mis amigos
+05-02 -12 Ir al cine
+02-02 +45 Paga
+03-03 -12 Ir al cine
+04-04 -45 Invitar a mis amigos
+05-05 +45 Paga
+06-06 -12 Ir al cine
+01-09 -30 De compras
+02-10 -10 Comprar un libro
+02-11 -12 Ir al cine
+12-12 -20 Comprar un libro
+11-12 -35 Ropa
+01-11 -45 Gimnasio
+01-10 +45 Paga
+03-02 -12 Ir al cine
+01-03 +45 Paga
