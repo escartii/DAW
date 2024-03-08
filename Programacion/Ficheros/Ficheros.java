@@ -3,7 +3,6 @@ import java.io.IOException;
 
 public class Ficheros {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         try {
             System.out.println("Vamos a crear un fichero");
             File file = new File("fichero.txt");
