@@ -1,2 +1,17 @@
-Hola, esto es un ejemplo de PrintWriter
-Este es un número: 42
+a
+c
+a
+b
+z
+a
+a
+a
+a
+a
+a
+a
+a
+a
+aaa
+qqqqq
+zzzzzzzz
