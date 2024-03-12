@@ -1,4 +1,4 @@
-package Programacion.Excepciones;
+
 
 public class PrimeraExcepcion {
     // Método que verifica si un número está dentro del rango [0,100]
