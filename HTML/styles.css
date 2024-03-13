@@ -129,6 +129,19 @@ table tr:hover td {
 .enlaces {
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     padding: 50px;
+    border: 1px;
+}
+
+.marca-de-agua{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(./borrador-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
