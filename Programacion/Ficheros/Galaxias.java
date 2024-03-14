@@ -1,7 +1,7 @@
 import java.io.Serializable;
 
 public class Galaxias implements Serializable {
-    private String Object;
+    String Object;
     private String CON;
     private String RA;
     private String DEC;
