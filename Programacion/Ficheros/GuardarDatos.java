@@ -1,6 +1,5 @@
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class GuardarDatos {
@@ -17,6 +16,7 @@ public class GuardarDatos {
                 salir = true;
             } else {
                 try {
+                    // el true es para añadir al fichero.
                     FileWriter fileWriter = new FileWriter("file1.txt", true);
                     fileWriter.write(respuesta + "\n");
                     fileWriter.close();
