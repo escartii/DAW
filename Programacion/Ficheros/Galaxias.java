@@ -16,4 +16,44 @@ public class Galaxias implements Serializable {
         this.MAG = MAG;
     }
 
+    public String getObject() {
+        return Object;
+    }
+
+    public void setObject(String object) {
+        Object = object;
+    }
+
+    public String getCON() {
+        return CON;
+    }
+
+    public void setCON(String cON) {
+        CON = cON;
+    }
+
+    public String getRA() {
+        return RA;
+    }
+
+    public void setRA(String rA) {
+        RA = rA;
+    }
+
+    public String getDEC() {
+        return DEC;
+    }
+
+    public void setDEC(String dEC) {
+        DEC = dEC;
+    }
+
+    public String getMAG() {
+        return MAG;
+    }
+
+    public void setMAG(String mAG) {
+        MAG = mAG;
+    }
+
 }
