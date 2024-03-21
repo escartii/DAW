@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         // COMPILAR: javac -cp :mysql-connector-j-8.3.0.jar Main.java
-        // EJECUTAR: java -cp :mysql-connector-j-8.3.0.jar Main.java
+        // EJECUTAR: java -cp :mysql-connector-j-8.3.0.jar Main
         try {
             // Conexión con la BD
             //Connection con = DriverManager.getConnection("jdbc:mysql://localhost:33006/",
