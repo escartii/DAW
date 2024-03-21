@@ -59,6 +59,10 @@ public class Interfaz {
                             Galaxias galaxia = objetos.get(i);
                             if (galaxia.getObject().equalsIgnoreCase(nombre)) {
                                 System.out.println(galaxia.getObject());
+                                System.out.println(galaxia.getCON());
+                                System.out.println(galaxia.getRA());
+                                System.out.println(galaxia.getDEC());
+                                System.out.println(galaxia.getMAG());
                             }
                             i++;
                         }
@@ -70,9 +74,10 @@ public class Interfaz {
                         for (Galaxias galaxia : objetos) {
                             // por si acaso introduce en minusculas
                             if (galaxia.getCON().equalsIgnoreCase(constelacion)) {
-                                System.out.println(galaxia.getCON()
+                                System.out.println(galaxia.getObject()
+                                        + " " + galaxia.getCON()
                                         + " " + galaxia.getRA()
-                                        + " " + galaxia.getDEC()
+                                        + " " + galaxia.getMAG()
                                         + " " + galaxia.getDEC());
                             }
                         }
@@ -103,7 +108,8 @@ public class Interfaz {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Caracter no valido(seguramente has introducido un punto ejemplo 13.8): ");
-                opcion = 4;
+                // para coger el carro (gracias a Gines)
+                sc.nextLine();
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
             }
