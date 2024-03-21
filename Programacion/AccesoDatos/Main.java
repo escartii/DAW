@@ -14,15 +14,15 @@ public class Main {
             //Connection con = DriverManager.getConnection("jdbc:mysql://localhost:33006/",
               //      "root", "dbrootpass");
 
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:33066/","root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root", "root");
             //Creamos un objeto para enviar sentencias SQL a la BD
             Statement st = con.createStatement();
             //Ejecutamos la consulta SQL y obtenemos el resultado en ResultSet
-            ResultSet rs = ((java.sql.Statement) st).executeQuery("SELECT * FROM videoclub.client");
+            ResultSet rs = ((java.sql.Statement) st).executeQuery("SELECT * FROM Chinook.Track");
             //// Recorremos los resultados obtenidos y mostramos sus campos
             while (rs.next()) {
-                String nombre = rs.getString("NOM");
-                String ciudad = rs.getString("DNI");
+                String nombre = rs.getString("Name");
+                String ciudad = rs.getString("Composer");
                 System.out.println(nombre + ": " + ciudad);
             }
             //// Cerramos la conexión
