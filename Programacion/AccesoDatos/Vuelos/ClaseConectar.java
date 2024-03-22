@@ -52,7 +52,7 @@ public class ClaseConectar {
 
         try {
             String insertQuery = "INSERT INTO aviones.Vuelos (id_vuelo, numero_vuelo, origen, destino, fecha, capacidad)"+
-            " VALUES ( 1,'"+num_vuelo+"' ,'" +origen+"' ,'"+destino +"' ,'"+fecha+" ' ,'"+Capacidad+"');";
+            " VALUES ( 2,'"+num_vuelo+"' ,'" +origen+"' ,'"+destino +"' ,'"+fecha+" ' ,'"+Capacidad+"');";
             Statement st = con.createStatement();
             st.executeUpdate(insertQuery);
 
@@ -61,10 +61,10 @@ public class ClaseConectar {
         }
     }
 
-    public void AltaPasajero(){
+    public void AltaPasajero(String numero_pasaporte, String nombre_pasajero){
 
         try {
-            String insertQuery = "INSERT INTO aviones.Pasajeros (id_pasajero, numero_pasaporte, nombre_pasajero) VALUES (2, 123456789, 'Ai')";
+            String insertQuery = "INSERT INTO aviones.Pasajeros (numero_pasaporte, nombre_pasajero) VALUES (2, 123456789, 'Ai')";
             Statement st = con.createStatement();
             int rowsAffected = st.executeUpdate(insertQuery);
 
