@@ -41,6 +41,11 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Opción 2 seleccionada: Alta Pasajero");
+                    System.out.println("Dime tu nombre: ");
+                    String nombre = sc.nextLine();
+                    System.out.println("Dime tu pasaporte");
+                    String pasaporte = sc.nextLine();
+                    conexion.AltaPasajero(nombre, pasaporte);
                     break;
                 case 3:
                     System.out.println("Opción 3 seleccionada: Reserva Vuelo");

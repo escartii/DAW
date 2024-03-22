@@ -49,7 +49,6 @@ public class ClaseConectar {
 
     public void AltaVuelo(String num_vuelo, String origen, String destino, String fecha, int Capacidad) {
         
-
         try {
             String insertQuery = "INSERT INTO aviones.Vuelos (id_vuelo, numero_vuelo, origen, destino, fecha, capacidad)"+
             " VALUES ( 2,'"+num_vuelo+"' ,'" +origen+"' ,'"+destino +"' ,'"+fecha+" ' ,'"+Capacidad+"');";
@@ -64,18 +63,11 @@ public class ClaseConectar {
     public void AltaPasajero(String numero_pasaporte, String nombre_pasajero){
 
         try {
-            String insertQuery = "INSERT INTO aviones.Pasajeros (numero_pasaporte, nombre_pasajero) VALUES (2, 123456789, 'Ai')";
+            String insertQuery = "INSERT INTO aviones.Pasajeros (id_pasajero, nombre_pasajero, numero_pasaporte)"+
+            " VALUES (5,'"+nombre_pasajero+"' ,'" +numero_pasaporte+"');";
             Statement st = con.createStatement();
-            int rowsAffected = st.executeUpdate(insertQuery);
+            st.executeUpdate(insertQuery);
 
-            if (rowsAffected > 0) {
-                System.out.println("Se ha añadido el pasajero correctamente");
-                System.out.println("ID Pasajero: 2");
-                System.out.println("Número de pasaporte: 123456789");
-                System.out.println("Nombre: Ai");
-            } else {
-                System.out.println("No se ha podido añadir el pasajero.");
-            }
         } catch (SQLException e) {
             System.out.println("Error en la bd: " + e.getErrorCode() + "-" + e.getMessage());
         }
