@@ -1,3 +1,4 @@
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class Main {
@@ -8,11 +9,8 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int opcion;
-
-         // Crear una instancia de ClaseConectar
-         ClaseConectar conexion = new ClaseConectar();
-         // Llamar al método conectar()
-         conexion.conectar();
+        ClaseConectar conexion = new ClaseConectar();
+        conexion.conectar();
         do {
             System.out.println("Menu:");
             System.out.println("1. Alta Vuelo");
@@ -23,26 +21,34 @@ public class Main {
             System.out.println("6. Salir");
             System.out.print("Ingrese una opción: ");
             opcion = sc.nextInt();
-
+            sc.nextLine();
+            // despues de un nextint hay que añadir un carro
             switch (opcion) {
                 case 1:
-                    // Lógica para el alta de vuelo
                     System.out.println("Opción 1 seleccionada: Alta Vuelo");
+                    System.out.print("Dime el numero de vuelo: ");
+                    String num_vuelo = sc.nextLine();
+                    System.out.print("Dime el origen: ");
+                    String origen = sc.nextLine();
+                    System.out.print("Dime el destino: ");
+                    String destino = sc.nextLine();
+                    System.out.print("Escribe la fecha (Formato inglés): ");
+                    String fecha = sc.nextLine();
+                    System.out.print("Capacidad: ");
+                    int capacidad = sc.nextInt();
+                    sc.nextLine();
+                    conexion.AltaVuelo(num_vuelo, origen, destino, fecha, capacidad);
                     break;
                 case 2:
-                    // Lógica para el alta de pasajero
                     System.out.println("Opción 2 seleccionada: Alta Pasajero");
                     break;
                 case 3:
-                    // Lógica para la reserva de vuelo
                     System.out.println("Opción 3 seleccionada: Reserva Vuelo");
                     break;
                 case 4:
-                    // Lógica para modificar reserva
                     System.out.println("Opción 4 seleccionada: Modificar reserva");
                     break;
                 case 5:
-                    // Lógica para la baja de reserva
                     System.out.println("Opción 5 seleccionada: Baja reserva");
                     break;
                 case 6:
