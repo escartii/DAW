@@ -16,7 +16,7 @@ if [ ! -f "$archivo_usuarios" ]; then
 fi
 
 # Itera sobre cada línea del archivo
-while IFS=':' read -r username password uid gid nombre_completo directorio_inicial shell; do
+while IFS=':' read -r username password gid nombre_completo directorio_inicial shell; do
     # Verifica si el grupo primario existe
     if ! getent group "$gid" &>/dev/null; then
         echo "El grupo $gid no existe. Creando el grupo..."
