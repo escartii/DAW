@@ -73,6 +73,12 @@ public class ClaseConectar {
         }
     }
 
+    public void ReservaVuelo(String num_vuelo_reserva, String pasaporte_reserva){
+        
+
+    }
+
+
     public Connection getCon() {
         return con;
     }
