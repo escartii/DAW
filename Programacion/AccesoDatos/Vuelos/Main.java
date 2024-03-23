@@ -49,6 +49,11 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Opción 3 seleccionada: Reserva Vuelo");
+                    System.out.print("Dime el número de vuelo: ");
+                    String num_vuelo_reserva = sc.nextLine();
+                    System.out.print("Dime el pasaporte del pasajero: ");
+                    String pasaporte_reserva = sc.nextLine();
+                    conexion.ReservaVuelo(num_vuelo_reserva, pasaporte_reserva);
                     break;
                 case 4:
                     System.out.println("Opción 4 seleccionada: Modificar reserva");
@@ -66,3 +71,5 @@ public class Main {
         } while (opcion != 6);
     }
 }
+                     
+                 
