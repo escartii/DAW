@@ -1,12 +1,12 @@
 -- Crear la base de datos
-CREATE DATABASE sistema_reservas_vuelos;
+CREATE DATABASE Vuelos;
 
 -- Usar la base de datos recién creada
-USE sistema_reservas_vuelos;
+USE Vuelos;
 
 -- Crear tabla Vuelos
 CREATE TABLE Vuelos (
-    id_vuelo INT PRIMARY KEY,
+    id_vuelo INT AUTO_INCREMENT PRIMARY KEY,
     numero_vuelo VARCHAR(20) NOT NULL,
     origen VARCHAR(50) NOT NULL,
     destino VARCHAR(50) NOT NULL,
@@ -16,15 +16,16 @@ CREATE TABLE Vuelos (
 
 -- Crear tabla Pasajeros
 CREATE TABLE Pasajeros (
-    id_pasajero INT PRIMARY KEY,
+    id_pasajero INT AUTO_INCREMENT PRIMARY KEY,
     numero_pasaporte VARCHAR(20) NOT NULL,
     nombre_pasajero VARCHAR(100) NOT NULL
 );
 
 -- Crear tabla Vuelos_Pasajeros
 CREATE TABLE Vuelos_Pasajeros (
-    id_vuelo INT,
-    id_pasajero INT,
+    id_Vuelos_Pasajeros INT AUTO_INCREMENT PRIMARY KEY,
+    id_vuelo INT AUTO_INCREMENT,
+    id_pasajero INT AUTO_INCREMENT,
     n_asiento INT,
     FOREIGN KEY (id_vuelo) REFERENCES Vuelos(id_vuelo),
     FOREIGN KEY (id_pasajero) REFERENCES Pasajeros(id_pasajero),

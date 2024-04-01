@@ -5,23 +5,39 @@ import java.sql.Connection;
 public class Vuelos {
 
 
-    public void AltaVuelo(){
+    public static void AltaVuelo(Connection cone, String num_vuelo, String origen, String destino, String fecha, int capacidad){
         try {
-            Connection con = ClaseConectar.getCon();
-            String insertQuery = "INSERT INTO aviones.Pasajeros (id_pasajero, numero_pasaporte, nombre_pasajero) VALUES (2, 123456789, 'Ai')";
-            Statement st = con.createStatement();
-            int rowsAffected = st.executeUpdate(insertQuery);
+            String insertQuery = "INSERT INTO vuelos.Pasajeros (numero_pasaporte, nombre_pasajero) VALUES (123456789, 'Ai')";
+            Statement st = cone.createStatement();
+            st.executeUpdate(insertQuery);
+            System.out.println("Ok");
 
-            if (rowsAffected > 0) {
-                System.out.println("Se ha añadido el pasajero correctamente");
-                System.out.println("ID Pasajero: 2");
-                System.out.println("Número de pasaporte: 123456789");
-                System.out.println("Nombre: Ai");
-            } else {
-                System.out.println("No se ha podido añadir el pasajero.");
-            }
         } catch (SQLException e) {
             System.out.println("Error en la bd: " + e.getErrorCode() + "-" + e.getMessage());
         }
-}
+    }
+
+    public static void AltaPasajero(Connection cone, String numero_pasaporte, String nombre_pasajero){
+
+        try {
+            String insertQuery = "INSERT INTO vuelos.Pasajeros (nombre_pasajero, numero_pasaporte)"+
+            " VALUES ('"+nombre_pasajero+"' ,'" +numero_pasaporte+"');";
+            Statement st = cone.createStatement();
+            st.executeUpdate(insertQuery);
+
+        } catch (SQLException e) {
+            System.out.println("Error en la bd: " + e.getErrorCode() + "-" + e.getMessage());
+        }
+    }
+
+
+    public static void ReservaVuelo(Connection cone, String num_vuelo_reserva, String pasaporte_reserva){
+        // id vuelo quieresd
+        // id pasajero
+        // numero asiento
+        // insert a la tabla de reservas 
+
+        
+
+    }
 }
