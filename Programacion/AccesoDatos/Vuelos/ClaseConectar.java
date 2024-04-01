@@ -1,4 +1,3 @@
-import java.sql.Statement;
 import java.util.Scanner;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +12,7 @@ public class ClaseConectar {
         Connection cone = null;
         try {
             // COMPILAR: javac -cp :mysql-connector-j-8.3.0.jar Main.java
-            // EJECUTAR: java -cp :mysql-connector-j-8.3.0.jar Main.java
+            // EJECUTAR: java -cp :mysql-connector-j-8.3.0.jar Main
             // Conexión con la BD
             cone = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "root");
             return cone;
@@ -22,8 +21,6 @@ public class ClaseConectar {
         }
         return cone;
     } 
-
-    
 
     public Connection getCon() {
         return con;

@@ -1,11 +1,24 @@
 import java.sql.Connection;
 import java.util.Scanner;
-
+import java.util.regex.Pattern;
 public class Main {
+
+    public static void LimpiarPantalla() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
+    public static boolean validarAsiento(String asiento) {
+        // Expresión regular para verificar el formato del asiento
+        String regex = "^[0-9][A-F]$";
+        return Pattern.matches(regex, asiento);
+    }
+
     public static void main(String[] args) {
 
         // COMPILAR: javac -cp :mysql-connector-j-8.3.0.jar *.java
         // EJECUTAR: java -cp :mysql-connector-j-8.3.0.jar Main
+        LimpiarPantalla();
 
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -40,19 +53,28 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Opción 2 seleccionada: Alta Pasajero");
-                    System.out.println("Dime tu nombre: ");
+                    System.out.print("Dime tu nombre: ");
                     String nombre = sc.nextLine();
-                    System.out.println("Dime tu pasaporte");
+                    System.out.print("Dime tu pasaporte");
                     String pasaporte = sc.nextLine();
                     Vuelos.AltaPasajero(conexion, pasaporte, nombre);
                     break;
                 case 3:
                     System.out.println("Opción 3 seleccionada: Reserva Vuelo");
                     System.out.print("Dime el número de vuelo: ");
-                    String num_vuelo_reserva = sc.nextLine();
-                    System.out.print("Dime el pasaporte del pasajero: ");
-                    String pasaporte_reserva = sc.nextLine();
-                    Vuelos.ReservaVuelo(conexion, num_vuelo_reserva, pasaporte_reserva);
+                    int id_vuelo = sc.nextInt();
+                    System.out.print("Dime el ID del pasajero: ");
+                    int id_pasajero = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Que asiento quieres: ");
+                    String asiento = sc.nextLine();
+                    
+                    if (validarAsiento(asiento)) {
+                        // El asiento es válido
+                        Vuelos.ReservaVuelo(conexion, id_vuelo, id_pasajero, asiento);
+                    } else {
+                        System.out.println("El asiento, no es válido... vuelve a intentarlo.");
+                    }
                     break;
                 case 4:
                     System.out.println("Opción 4 seleccionada: Modificar reserva");
