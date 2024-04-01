@@ -7,7 +7,7 @@ public class Vuelos {
 
     public static void AltaVuelo(Connection cone, String num_vuelo, String origen, String destino, String fecha, int capacidad){
         try {
-            String insertQuery = "INSERT INTO vuelos.Pasajeros (numero_pasaporte, nombre_pasajero) VALUES (123456789, 'Ai')";
+            String insertQuery = "INSERT INTO aviones.Pasajeros (numero_pasaporte, nombre_pasajero) VALUES (123456789, 'Ai')";
             Statement st = cone.createStatement();
             st.executeUpdate(insertQuery);
             System.out.println("Ok");
@@ -20,7 +20,7 @@ public class Vuelos {
     public static void AltaPasajero(Connection cone, String numero_pasaporte, String nombre_pasajero){
 
         try {
-            String insertQuery = "INSERT INTO vuelos.Pasajeros (nombre_pasajero, numero_pasaporte)"+
+            String insertQuery = "INSERT INTO aviones.Pasajeros (nombre_pasajero, numero_pasaporte)"+
             " VALUES ('"+nombre_pasajero+"' ,'" +numero_pasaporte+"');";
             Statement st = cone.createStatement();
             st.executeUpdate(insertQuery);
@@ -36,8 +36,5 @@ public class Vuelos {
         // id pasajero
         // numero asiento
         // insert a la tabla de reservas 
-
-        
-
     }
 }
