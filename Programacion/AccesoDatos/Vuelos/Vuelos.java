@@ -50,12 +50,13 @@ public class Vuelos {
             ResultSet rs = st.executeQuery(selectQuery);
             
             while (rs.next()) {
-                
+                int reserva = rs.getInt("id_Vuelos_Pasajeros");
                 int id_vuelo = rs.getInt("id_vuelo");
                 int id_pasajero = rs.getInt("id_pasajero");
                 String n_asiento = rs.getString("n_asiento");
                 // imprimo todos los resultados
                 System.out.println("--------------------");
+                System.out.println("ID Reserva: " + reserva);
                 System.out.println("ID Vuelo: " + id_vuelo);
                 System.out.println("ID Pasajero: " + id_pasajero);
                 System.out.println("Asiento: " + n_asiento);
@@ -71,7 +72,7 @@ public class Vuelos {
     // 
     public static void modificarReserva(Connection cone, int reserva, String asiento){
         try {
-            String updateQuery = "UPDATE vuelos.vuelos_pasajeros SET n_asiento = '" + asiento + "' WHERE reserva = " + reserva + ";";
+            String updateQuery = "UPDATE vuelos.vuelos_pasajeros SET n_asiento = '" + asiento + "' WHERE id_Vuelos_Pasajeros = " + reserva + ";";
             Statement st = cone.createStatement();
             st.executeUpdate(updateQuery);
 

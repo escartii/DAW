@@ -83,7 +83,7 @@ public class Main {
                     System.out.print("Dime el numero de reserva: ");
                     int reserva = sc.nextInt();
                     sc.nextLine();
-                    System.out.println("Que asiento quieres modificar: ");
+                    System.out.print("Que asiento quieres: ");
                     asiento = sc.nextLine();
 
                     Vuelos.modificarReserva(conexion, reserva ,asiento);
