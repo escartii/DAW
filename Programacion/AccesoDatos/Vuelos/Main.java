@@ -100,6 +100,7 @@ public class Main {
                     Vuelos.mostrarVuelosPasajeros(conexion);
                     System.out.print("Dime el numero de reserva: ");
                     reserva = sc.nextInt();
+                    Vuelos.bajaReserva(conexion, reserva);
                     break;
                 case 6:
                     System.out.println("Saliendo del programa...");

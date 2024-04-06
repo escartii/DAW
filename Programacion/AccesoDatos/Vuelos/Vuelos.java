@@ -69,7 +69,7 @@ public class Vuelos {
             System.out.println("Error en la bd: " + e.getErrorCode() + "-" + e.getMessage());
         }
     }
-    // 
+    
     public static void modificarReserva(Connection cone, int reserva, String asiento){
         try {
             String updateQuery = "UPDATE vuelos.vuelos_pasajeros SET n_asiento = '" + asiento + "' WHERE id_Vuelos_Pasajeros = " + reserva + ";";
@@ -83,7 +83,7 @@ public class Vuelos {
 
     public static void bajaReserva(Connection cone, int reserva) {
         try {
-            String deleteQuery = "DELETE FROM vuelos.vuelos_pasajeros WHERE id_Vuelos_Pasajeros = " + reserva + ";";
+            String deleteQuery = "DELETE FROM vuelos.vuelos_pasajeros WHERE id_Vuelos_Pasajeros = '" + reserva + "';";
             Statement st = cone.createStatement();
             st.executeUpdate(deleteQuery);
             System.out.println("Has cancelado tu reserva");
