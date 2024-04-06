@@ -68,13 +68,12 @@ public class Vuelos {
             System.out.println("Error en la bd: " + e.getErrorCode() + "-" + e.getMessage());
         }
     }
-
-    public static void modificarReserva(Connection cone, int id_vuelo, int id_pasajero, String asiento){
+    // 
+    public static void modificarReserva(Connection cone, int reserva, String asiento){
         try {
-            String insertQuery = "INSERT INTO vuelos.vuelos_pasajeros (id_vuelo, id_pasajero, n_asiento)"+
-            " VALUES ("+id_vuelo+", "+id_pasajero+", '"+asiento+"');";
+            String updateQuery = "UPDATE vuelos.vuelos_pasajeros SET n_asiento = '" + asiento + "' WHERE reserva = " + reserva + ";";
             Statement st = cone.createStatement();
-            st.executeUpdate(insertQuery);
+            st.executeUpdate(updateQuery);
 
         } catch (SQLException e) {
             System.out.println("Error en la bd: " + e.getErrorCode() + "-" + e.getMessage());

@@ -86,7 +86,7 @@ public class Main {
                     System.out.println("Que asiento quieres modificar: ");
                     asiento = sc.nextLine();
 
-                    Vuelos.modificarReserva(conexion, id_vuelo, id_pasajero, asiento);
+                    Vuelos.modificarReserva(conexion, reserva ,asiento);
                     break;
                 case 5:
                     System.out.println("Opción 5 seleccionada: Baja reserva");
