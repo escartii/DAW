@@ -9,9 +9,10 @@ public class Main {
     }
 
     public static boolean validarAsiento(String asiento) {
-        // Expresión regular para verificar el formato del asiento
-        String regex = "^[0-9][A-F]$";
-        return Pattern.matches(regex, asiento);
+        // Compruebo que el asiento comienza por numero y acaba entre A-F
+        // fuente: https://codegym.cc/es/groups/posts/es.130.expresiones-regulares-en-java
+        String asientoValido = "^[0-9][A-F]$";
+        return Pattern.matches(asientoValido, asiento);
     }
 
     public static void main(String[] args) {
@@ -23,6 +24,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int opcion;
         String asiento = "";
+        int reserva;
         Connection conexion = ClaseConectar.conectar();
         do {
             System.out.println("Menu:");
@@ -81,15 +83,23 @@ public class Main {
                     System.out.println("Opción 4 seleccionada: Modificar reserva");
                     Vuelos.mostrarVuelosPasajeros(conexion);
                     System.out.print("Dime el numero de reserva: ");
-                    int reserva = sc.nextInt();
+                    reserva = sc.nextInt();
                     sc.nextLine();
                     System.out.print("Que asiento quieres: ");
                     asiento = sc.nextLine();
 
-                    Vuelos.modificarReserva(conexion, reserva ,asiento);
+                    if (validarAsiento(asiento)) {
+                        // El asiento es válido
+                        Vuelos.modificarReserva(conexion, reserva ,asiento);
+                    } else {
+                        System.out.println("El asiento, no es válido... vuelve a intentarlo.");
+                    }
                     break;
                 case 5:
                     System.out.println("Opción 5 seleccionada: Baja reserva");
+                    Vuelos.mostrarVuelosPasajeros(conexion);
+                    System.out.print("Dime el numero de reserva: ");
+                    reserva = sc.nextInt();
                     break;
                 case 6:
                     System.out.println("Saliendo del programa...");
@@ -99,6 +109,8 @@ public class Main {
                     break;
             }
         } while (opcion != 6);
+
+        sc.close();
     }
 }
                      
