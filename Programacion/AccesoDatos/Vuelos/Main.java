@@ -78,6 +78,9 @@ public class Main {
                     break;
                 case 4:
                     System.out.println("Opción 4 seleccionada: Modificar reserva");
+                    Vuelos.mostrarVuelosPasajeros(conexion);
+                    System.out.println("Introduce el número de vuelo: ");
+                    int id_vuelo2 = sc.nextInt();
                     break;
                 case 5:
                     System.out.println("Opción 5 seleccionada: Baja reserva");
