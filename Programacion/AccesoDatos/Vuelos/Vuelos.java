@@ -92,6 +92,4 @@ public class Vuelos {
             System.out.println("Error en la bd: " + e.getErrorCode() + "-" + e.getMessage());
         }
     }
-    
-    
 }
