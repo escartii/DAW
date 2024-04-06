@@ -22,6 +22,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int opcion;
+        String asiento = "";
         Connection conexion = ClaseConectar.conectar();
         do {
             System.out.println("Menu:");
@@ -67,7 +68,7 @@ public class Main {
                     int id_pasajero = sc.nextInt();
                     sc.nextLine();
                     System.out.print("Que asiento quieres: ");
-                    String asiento = sc.nextLine();
+                    asiento = sc.nextLine();
                     
                     if (validarAsiento(asiento)) {
                         // El asiento es válido
@@ -79,8 +80,13 @@ public class Main {
                 case 4:
                     System.out.println("Opción 4 seleccionada: Modificar reserva");
                     Vuelos.mostrarVuelosPasajeros(conexion);
-                    System.out.println("Introduce el número de vuelo: ");
-                    int id_vuelo2 = sc.nextInt();
+                    System.out.print("Dime el numero de reserva: ");
+                    int reserva = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Que asiento quieres modificar: ");
+                    asiento = sc.nextLine();
+
+                    Vuelos.modificarReserva(conexion, id_vuelo, id_pasajero, asiento);
                     break;
                 case 5:
                     System.out.println("Opción 5 seleccionada: Baja reserva");
