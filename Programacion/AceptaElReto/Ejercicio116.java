@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Ejercicio116 {
+
+    // Alvaro Escarti
      public static void main(String[] args){
         Scanner myObj = new Scanner(System.in);  // Creamos el objeto 
         int parametro = myObj.nextInt();

@@ -1,5 +1,7 @@
 # EjercicioFunciones
 
+**[Enlace a mi repositorio](https://gitlab.com/escartii/bases-de-datos/)**
+
 ## Query 1:
 
 Voy a hacer un SELECT de toda la tabla Customer y voy a filtrar donde "Country" sea igual a "France"
