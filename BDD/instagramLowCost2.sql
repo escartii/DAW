@@ -175,6 +175,7 @@ CREATE TABLE `reaccionesFotos` (
   `idUsuario` int(11) NOT NULL,
   `idTipoReaccion` int(11) NOT NULL,
   PRIMARY KEY (`idFoto`,`idUsuario`),
+  PRIMARY KEY (`idFoto`,`idUsuario`),
   KEY `fk_reaccionesFotos_tiposReaccion` (`idTipoReaccion`),
   KEY `fk_reaccionesFotos_usuarios` (`idUsuario`),
   CONSTRAINT `fk_reaccionesFotos_fotos` FOREIGN KEY (`idFoto`) REFERENCES `fotos` (`idFoto`),
