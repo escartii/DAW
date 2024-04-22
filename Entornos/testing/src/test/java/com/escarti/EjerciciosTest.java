@@ -27,4 +27,12 @@ public class EjerciciosTest {
         // primero es el que se espera, segundo es el que se obtiene
         assertArrayEquals(new int[]{-1, 3, 0}, ejercicios.ordenar(array));
     }
+
+    @Test
+    public void testAverage(){
+        Ejercicios ejercicios = new Ejercicios();
+        assertEquals(2.5, ejercicios.average(new int[] {1,2,3,4}), 0.01);
+    }
+
+    
 }

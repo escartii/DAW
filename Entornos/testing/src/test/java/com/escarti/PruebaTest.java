@@ -55,6 +55,5 @@ public class PruebaTest {
     public void testArrayEquals() {
         assertArrayEquals(expectedArray, resultArray);
     }
-
     
 }
