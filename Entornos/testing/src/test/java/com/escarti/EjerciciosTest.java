@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class EjerciciosTest {
     
-    int [] array = {3, 0, -1};
+    int [] array = {0,1,2};
 
     @Test
     public void testSuma() {
@@ -29,10 +29,24 @@ public class EjerciciosTest {
     }
 
     @Test
+    // el delta sirve para que un valor tenga un margen
     public void testAverage(){
         Ejercicios ejercicios = new Ejercicios();
         assertEquals(2.5, ejercicios.average(new int[] {1,2,3,4}), 0.01);
+        assertEquals(-2.5, ejercicios.average(new int[] {-1,-2,-3,-4}), 0.01);
+        assertNotEquals(-2.6, ejercicios.average(new int[] {-1,-2,-3,-4}), 0.01);       
     }
 
-    
+    @Test
+    public void testBinarySearch(){
+        Ejercicios ejercicios = new Ejercicios();
+        assertTrue(0 <= ejercicios.binarySearch(array, 999));
+        assertFalse(-1 == ejercicios.binarySearch(array, 0));
+    }
+
+    @Test
+    public void testCelsiusToFarenheit(){
+        Ejercicios ejercicios = new Ejercicios();
+        assertEquals(41, ejercicios.celsiusToFarenheit(5), 0.01);
+    }
 }
