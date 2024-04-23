@@ -15,15 +15,23 @@
 #echo "Usuario creado correctamente"
 
 #Año, mes y dia
-current_date=$(date +"%Y-%m-%d")
+date=$(date +"%Y-%m-%d")
 #Hora y minutos
-current_time=$(date +"%H-%M")
+time=$(date +"%H-%M")
 
-if [ -d /media/escartii ]; then
-    echo "la particion está montada"
-    tar -czf /media/escartii/$current_date-$current_time.tar.gz /home/carles/Escritorio
+
+if mount | grep -q "/dev/sdb1"; then
+    echo "/dev/sbd1 está montado"
 else
-    echo "la particion no esta montada"
-    exit 1
+    echo "/dev/sdb1 no está montado"
+    if [ -d /media/escartii ]; then
+        echo "la carpeta /media/escartii existe"
+    else
+        echo "la carpeta /media/escartii no existe"
+        mkdir /media/escartii
+    fi
+    mount /dev/sdb1 /media/escartii
 fi
 
+tar -czf /media/escartii/$date-$time.tar.gz /home/carles/Escritorio
+echo "Copia de seguridad realizada correctamente"
