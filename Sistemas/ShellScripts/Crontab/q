@@ -1,0 +1,155 @@
+MAIL.MAILUTILS(1)                                             User Commands                                            MAIL.MAILUTILS(1)
+
+NNAAMMEE
+       mail.mailutils - process mail messages
+
+SSYYNNOOPPSSIISS
+       mmaaiill..mmaaiilluuttiillss [_O_P_T_I_O_N...] [_a_d_d_r_e_s_s...]
+       mmaaiill..mmaaiilluuttiillss [_O_P_T_I_O_N...] [_O_P_T_I_O_N...] [_f_i_l_e]
+       mmaaiill..mmaaiilluuttiillss [_O_P_T_I_O_N...] _-_-_f_i_l_e [_O_P_T_I_O_N...] [_f_i_l_e]
+       mmaaiill..mmaaiilluuttiillss [_O_P_T_I_O_N...] _-_-_f_i_l_e_=_f_i_l_e [_O_P_T_I_O_N...]
+
+DDEESSCCRRIIPPTTIIOONN
+       GNU  mail  ----  process mail messages.  If --ff or ----ffiillee is given, mail operates on the mailbox named by the first argument, or the
+       user's mbox, if no argument given.
+
+       --AA, ----aattttaacchh=_F_I_L_E
+              attach FILE
+
+       --aa, ----aappppeenndd=_H_E_A_D_E_R: VALUE append given header to the message being sent
+
+       ----[[nnoo--]]aalltteerrnnaattiivvee
+              force multipart/alternative content type
+
+       ----aattttaacchh--ffdd=_F_D
+              attach from file descriptor FD
+
+       ----ccoonntteenntt--ffiilleennaammee=_N_A_M_E
+              set the Content-Disposition filename parameter for the next ----aattttaacchh option
+
+       ----ccoonntteenntt--nnaammee=_N_A_M_E
+              set the Content-Type name parameter for the next ----aattttaacchh option
+
+       ----ccoonntteenntt--ttyyppee=_T_Y_P_E
+              set content type for subsequent ----aattttaacchh options
+
+       --EE, ----eexxeecc=_C_O_M_M_A_N_D
+              execute COMMAND
+
+       --ee, ----eexxiisstt
+              return true if mail exists
+
+       ----eennccooddiinngg=_N_A_M_E
+              set encoding for subsequent ----aattttaacchh options
+
+       --FF, ----bbyynnaammee
+              save messages according to sender
+
+       --HH, ----hheeaaddeerrss
+              write a header summary and exit
+
+       --ii, ----iiggnnoorree
+              ignore interrupts
+
+       --MM, ----[[nnoo--]]mmiimmee
+              compose MIME messages
+
+       --NN, ----nnoossuumm
+              do not display initial header summary
+
+       --nn, ----nnoorrcc
+              do not read the system mailrc file
+
+       --pp, ----pprriinntt, ----rreeaadd
+              print all mail to standard output
+
+       --qq, ----qquuiitt
+              cause interrupts to terminate program
+
+       --rr, ----rreettuurrnn--aaddddrreessss=_A_D_D_R_E_S_S
+              use address as the return address when sending mail
+
+       --ss, ----ssuubbjjeecctt=_S_U_B_J
+              send a message with the given SUBJECT
+
+       ----[[nnoo--]]sskkiipp--eemmppttyy--aattttaacchhmmeennttss
+              skip attachments with empty body
+
+       --tt, ----ttoo
+              read recipients from the message header
+
+       --uu, ----uusseerr=_U_S_E_R
+              operate on USER's mailbox
+
+              Global debugging settings
+
+       ----ddeebbuugg--lleevveell=_L_E_V_E_L
+              set Mailutils debugging level
+
+       ----[[nnoo--]]ddeebbuugg--lliinnee--iinnffoo show source info with debugging messages
+
+              Configuration handling
+
+       ----ccoonnffiigg--ffiillee=_F_I_L_E
+              load this configuration file; implies ----nnoo--ccoonnffiigg
+
+       ----ccoonnffiigg--lliinntt
+              check configuration file syntax and exit
+
+       ----ccoonnffiigg--vveerrbboossee
+              verbosely log parsing of the configuration files
+
+       ----nnoo--ccoonnffiigg
+              do not load site and user configuration files
+
+       ----nnoo--ssiittee--ccoonnffiigg
+              do not load site-wide configuration file
+
+       ----nnoo--uusseerr--ccoonnffiigg
+              do not load user configuration file
+
+       ----sseett=_P_A_R_A_M_=_V_A_L_U_E
+              set configuration parameter
+
+              Informational options
+
+       ----ccoonnffiigg--hheellpp
+              show configuration file summary
+
+       ----sshhooww--ccoonnffiigg--ooppttiioonnss
+              show compilation options
+
+       -?, ----hheellpp
+              give this help list
+
+       ----uussaaggee
+              give a short usage message
+
+       --VV, ----vveerrssiioonn
+              print program version
+
+       Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
+
+RREEPPOORRTTIINNGG BBUUGGSS
+       Report bugs to <bug-mailutils@gnu.org>.
+       GNU Mailutils home page: <http://mailutils.org>
+       General help using GNU software: <http://www.gnu.org/gethelp/>
+
+CCOOPPYYRRIIGGHHTT
+       Copyright © 2007-2022  Free  Software  Foundation,  inc.   License  GPLv3+:  GNU  GPL  version  3  or  later  <http://gnu.org/li‐
+       censes/gpl.html>
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
+
+SSEEEE AALLSSOO
+       The  complete  GNU mailutils documentation is maintained as a Texinfo manual. If the mmaaiilluuttiillss--ddoocc package is installed, the com‐
+       mand
+
+              iinnffoo mmaaiilluuttiillss
+
+       should give you access to the complete manual.
+       You can also find this manual online in the GNU mailutils webpage:
+       https://www.gnu.org/software/mailutils/manual/index.html.
+       Please note this manpage was automatically generated by the Debian mailutils packagers. Do not file bugs for its content  to  the
+       GNU Mailutils upstream authors.
+
+FSF                                                           January 2022                                             MAIL.MAILUTILS(1)
