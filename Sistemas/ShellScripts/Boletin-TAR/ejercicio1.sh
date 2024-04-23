@@ -34,4 +34,7 @@ else
 fi
 
 tar -czf /media/escartii/$date-$time.tar.gz /home/carles/Escritorio
+cd /
+
+tar xvf /media/escartii/$date-$time.tar.gz
 echo "Copia de seguridad realizada correctamente"
