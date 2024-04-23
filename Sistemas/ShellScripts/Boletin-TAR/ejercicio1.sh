@@ -20,6 +20,10 @@ date=$(date +"%Y-%m-%d")
 time=$(date +"%H-%M")
 
 
+# Creo un fichero
+
+touch /home/carles/Escritorio/fichero5.txt
+
 if mount | grep -q "/dev/sdb1"; then
     echo "/dev/sbd1 está montado"
 else
@@ -33,8 +37,13 @@ else
     mount /dev/sdb1 /media/escartii
 fi
 
-tar -czf /media/escartii/$date-$time.tar.gz /home/carles/Escritorio
+
+# Creo un fichero incremental con los ficheros de /home/carles/Escritorio
+tar cv -g /tmp/lista-incremental.file -f /media/escartii/$date-$time.tar /home/carles/Escritorio
+# Elimino el fichero fichero5.txt
+rm -rf /home/carles/Escritorio/fichero5.txt
+
 cd /
 
-tar xvf /media/escartii/$date-$time.tar.gz
-echo "Copia de seguridad realizada correctamente"
+tar xvf $(ls -t /media/escartii/*.tar | head -1)
+echo "Copia de seguridad recuperada correctamente"
