@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Hecho por Alvaro Escarti :))
+
 if [ "$EUID" -ne 0 ]; then
     echo "Debes ejecutar como sudo"
     exit
