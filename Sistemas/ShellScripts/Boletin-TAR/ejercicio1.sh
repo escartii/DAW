@@ -39,7 +39,7 @@ fi
 
 
 # Creo un fichero incremental con los ficheros de /home/carles/Escritorio
-tar cv -g /tmp/lista-incremental.file -f /media/escartii/$date-$time.tar /home/carles/Escritorio
+tar cv -g /tmp/lista-incremental.file -f /media/escartii/"$date"-"$time".tar /home/carles/Escritorio
 # Elimino el fichero fichero5.txt
 rm -rf /home/carles/Escritorio/fichero5.txt
 

@@ -17,7 +17,7 @@ else
         echo "-/dev/sdb4 no está montada."
         echo "USO: sudo mount /dev/sdb4 /BACKUPS"
         read -p "¿Desea montar la partición /dev/sdb4 en /BACKUPS? (s/n): " respuesta
-        if [ $respuesta = "s"  || $respuesta = "si" || $respuesta = "y" | $respuesta == "yes"]; then
+        if [ $respuesta = "s"  || $respuesta = "si" || $respuesta = "y" || $respuesta == "yes"]; then
             sudo mount /dev/sdb4 /BACKUPS
             echo "Partición montada..."
             tar cv -g /BACKUPS/lista-incremental.file -f /BACKUPS/noticias-$(date +%d-%m-%Y).tar /NOTICIAS

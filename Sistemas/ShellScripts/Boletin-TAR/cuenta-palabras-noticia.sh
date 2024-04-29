@@ -36,6 +36,7 @@ while IFS="$" read -r ID FECHA TITULO AUTOR TEXTO; do
     mes=$(date -d "$date" "+%B")
     echo "$AUTOR,$contarPalabras,$precioPalabra" >> "pagar-$mes.txt"
     echo "$AUTOR", "$TITULO", "$contarPalabras" >> "palabras-$mes.txt"
-done < $fichero
-
+done < "$fichero"
+# para buscar las lineas repetidas primero usamos sort y se lo pasamos al uniq
+# ejemplo: cat palabras.txt | sort | uniq 
 exit 0

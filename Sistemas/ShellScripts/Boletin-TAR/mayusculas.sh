@@ -1,3 +1,4 @@
+#!/bin/bash
 # Para tratar las noticias
 for file in noticias*.txt
 do
@@ -5,6 +6,6 @@ do
 	do
 		TITULOM=$(echo "$TITULO" | tr 'a-z' 'A-Z')
 		#TITULOM=$(echo "$TITULO" | tr '[:lower:]' '[:upper:]') 
-		echo "$ID"\$"$FECHA"\$"$TITULOM"\$"$AUTOR"\$"$TEXTO" > $file
+		echo "$ID"\$"$FECHA"\$"$TITULOM"\$"$AUTOR"\$"$TEXTO" > "$file"
 	done < "$file"
 done 
