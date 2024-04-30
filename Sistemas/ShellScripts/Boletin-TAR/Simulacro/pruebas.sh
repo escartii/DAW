@@ -16,6 +16,6 @@ fi
 
 fichero=$1
 # Ordenar el contenido del fichero alfabéticamente
-cat $1 | sort -k 1 -d | uniq > output1.txt
+cat $1 | sort -k1 | uniq > output1.txt
 
 exit 0
