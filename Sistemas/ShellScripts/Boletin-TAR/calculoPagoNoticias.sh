@@ -18,3 +18,9 @@ cat pagar-$(date +%B).txt
 # -o --> lo mismo que > (puede dar errores)
 # -n --> ordena en números
 # -r --> "al revés" reverse
+
+
+# para buscar las lineas repetidas primero usamos sort y se lo pasamos al uniq
+# ejemplo: cat palabras.txt | sort | uniq 
+
+
