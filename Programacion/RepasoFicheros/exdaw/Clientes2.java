@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -47,4 +49,44 @@ public class Clientes2 {
             System.out.println("Error al importar clientes desde " + archivoCSV + ": " + e.getMessage());
         }
     }
+
+    public static void actualizarLimiteCredito(Connection conexion, int codigoCliente, double limiteCreditoNuevo) {
+        try {
+            PreparedStatement st = conexion.prepareStatement("UPDATE clientes SET LimiteCredito = ? WHERE CodigoCliente = ?");
+            st.setDouble(1, limiteCreditoNuevo);
+            st.setInt(2, codigoCliente);
+            int affectedRows = st.executeUpdate();
+            if (affectedRows > 0) {
+                System.out.println("Límite de crédito actualizado correctamente.");
+            } else {
+                System.out.println("No se encontró el cliente con el código " + codigoCliente);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al actualizar el límite de crédito: " + e.getMessage());
+        }
+    }
+
+    public static void exportarDatosCSV(Connection conexion, String archivoCSV) {
+        try {
+            PreparedStatement st = conexion.prepareStatement("SELECT * FROM exdaw.clientes");
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                int codigoCliente = rs.getInt("CodigoCliente");
+                String nombreCliente = rs.getString("NombreCliente");
+                String nombreContacto = rs.getString("NombreContacto");
+                String linea = codigoCliente + "," + nombreCliente + "," + nombreContacto;
+                try (BufferedWriter bw = new BufferedWriter(new FileWriter("FACTURA-15.csv", true))) {
+                    bw.write(linea);
+                    bw.newLine();
+                } catch (IOException e) {
+                    System.out.println("Error al exportar datos a CSV: " + e.getMessage());
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Error en la bd: " + e.getErrorCode() + "-" + e.getMessage());
+        }
+    }
+
+    
+    
 }

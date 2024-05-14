@@ -54,6 +54,7 @@ public class Main2 {
                     case 3:
                         System.out.print("Introduzca el nombre del archivo CSV: ");
                         String archivoCSV = sc.nextLine();
+                        Clientes2.exportarDatosCSV(conexion, archivoCSV);
                         break;
                     case 4:
                         System.out.print("Introduzca el nombre del archivo CSV: ");
