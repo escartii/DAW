@@ -42,6 +42,7 @@ public class Clientes {
             System.out.println("Error al agregar cliente: " + e.getErrorCode() + "-" + e.getMessage());
         }
     }
+    
     // Saber el siguiente CodigoCliente disponible
     private static int getNextCodigoCliente(Connection conexion) {
         try {
@@ -50,11 +51,11 @@ public class Clientes {
             if (rs.next()) {
                 return rs.getInt("NextCodigoCliente");
             } else {
-                return 1; // Return 1 if no rows are found
+                return 1;
             }
         } catch (SQLException e) {
             System.out.println("Error al obtener el próximo CodigoCliente: " + e.getErrorCode() + "-" + e.getMessage());
-            return 1; // Return 1 if an error occurs
+            return 1;
         }
     }
 }
